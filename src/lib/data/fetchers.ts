@@ -45,14 +45,14 @@ export async function getHomepageData(): Promise<HomepageData> {
  * Fetches about page data
  */
 export async function getAboutData(): Promise<AboutData> {
-  const [about, team] = await Promise.all([
-    fetchData("about.json"),
-    fetchData("team.json"),
+  const [aboutData, teamData] = await Promise.all([
+    fetchData<Omit<AboutData, "team">>("about.json"),
+    fetchData<{ members: AboutData["team"] }>("team.json"),
   ]);
 
   return {
-    ...about,
-    team: team.members,
+    ...aboutData,
+    team: teamData.members,
   };
 }
 
@@ -60,16 +60,16 @@ export async function getAboutData(): Promise<AboutData> {
  * Fetches services data
  */
 export async function getServicesData(): Promise<ServicesData> {
-  const [services, technologies, process] = await Promise.all([
-    fetchData("services.json"),
-    fetchData("technologies.json"),
-    fetchData("process.json"),
+  const [servicesData, technologiesData, processData] = await Promise.all([
+    fetchData<Omit<ServicesData, "technologies" | "process">>("services.json"),
+    fetchData<{ categories: ServicesData["technologies"] }>("technologies.json"),
+    fetchData<{ steps: ServicesData["process"] }>("process.json"),
   ]);
 
   return {
-    ...services,
-    technologies: technologies.categories,
-    process: process.steps,
+    ...servicesData,
+    technologies: technologiesData.categories,
+    process: processData.steps,
   };
 }
 
@@ -99,10 +99,10 @@ export async function getProjectBySlug(slug: string) {
  * Fetches blog data
  */
 export async function getBlogData(): Promise<BlogData> {
-  const [posts, authors, categories] = await Promise.all([
-    fetchData("blog/posts.json"),
-    fetchData("blog/authors.json"),
-    fetchData("blog/categories.json"),
+  const [postsData, authorsData, categoriesData] = await Promise.all([
+    fetchData<{ posts: BlogData["posts"] }>("blog/posts.json"),
+    fetchData<{ authors: BlogData["authors"] }>("blog/authors.json"),
+    fetchData<{ categories: BlogData["categories"] }>("blog/categories.json"),
   ]);
 
   return {
@@ -110,9 +110,9 @@ export async function getBlogData(): Promise<BlogData> {
       title: "Insights & Updates",
       subtitle: "From the Mikasasoft Team",
     },
-    posts: posts.posts,
-    authors: authors.authors,
-    categories: categories.categories,
+    posts: postsData.posts,
+    authors: authorsData.authors,
+    categories: categoriesData.categories,
   };
 }
 
@@ -141,9 +141,9 @@ export async function getPostBySlug(slug: string) {
  * Fetches careers data
  */
 export async function getCareersData(): Promise<CareersData> {
-  const [jobs, benefits] = await Promise.all([
-    fetchData("careers/jobs.json"),
-    fetchData("careers/benefits.json"),
+  const [jobsData, benefitsData] = await Promise.all([
+    fetchData<{ jobs: CareersData["jobs"] }>("careers/jobs.json"),
+    fetchData<{ categories: CareersData["benefits"] }>("careers/benefits.json"),
   ]);
 
   return {
@@ -158,8 +158,8 @@ export async function getCareersData(): Promise<CareersData> {
       images: [],
       highlights: ["Remote work", "Learning budget", "Team events"],
     },
-    benefits: benefits.categories,
-    jobs: jobs.jobs,
+    benefits: benefitsData.categories,
+    jobs: jobsData.jobs,
     hiringProcess: [
       {
         step: 1,
@@ -226,7 +226,7 @@ export async function getContactData(): Promise<ContactData> {
  * Fetches team members
  */
 export async function getTeamMembers() {
-  const data = await fetchData<{ members: unknown[] }>("team.json");
+  const data = await fetchData<{ members: AboutData["team"] }>("team.json");
   return data.members;
 }
 
@@ -235,5 +235,5 @@ export async function getTeamMembers() {
  */
 export async function getFeaturedTeamMembers() {
   const members = await getTeamMembers();
-  return members.filter((member: { featured?: boolean }) => member.featured);
+  return members.filter((member) => member.featured);
 }

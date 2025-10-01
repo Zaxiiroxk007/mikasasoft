@@ -5,6 +5,8 @@ import {
   Inter,
   Space_Grotesk
 } from "next/font/google";
+import { Navbar } from "@/components/common/Navigation";
+import { Footer } from "@/components/common/Footer";
 import "./globals.css";
 
 // Premium Fonts Configuration
@@ -93,7 +95,9 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${montserrat.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
