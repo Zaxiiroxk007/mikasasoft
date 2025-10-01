@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "slug": "future-of-web-development-2025",
+      "title": "The Future of Web Development in 2025: What You Need to Know",
+      "excerpt": "Explore the emerging trends shaping web development, from AI-powered tools to edge computing and beyond.",
+      "content": "Full article content would go here...",
+      "author": "alex-reeves",
+      "category": "web-dev",
+      "tags": ["Next.js", "AI", "Trends", "React"],
+      "featuredImage": {"url": "/assets/images/blog/web-dev-2025.jpg", "alt": "Future of web development"},
+      "publishedAt": "2024-12-01",
+      "readTime": 8,
+      "featured": true
+    },
+    {
+      "id": "2",
+      "slug": "building-scalable-cloud-architecture",
+      "title": "Building Scalable Cloud Architecture: Lessons from the Trenches",
+      "excerpt": "Learn how to design cloud infrastructure that scales effortlessly, drawing from real-world enterprise projects.",
+      "content": "Full article content would go here...",
+      "author": "maria-santos",
+      "category": "cloud",
+      "tags": ["AWS", "Kubernetes", "Scalability", "DevOps"],
+      "featuredImage": {"url": "/assets/images/blog/cloud-architecture.jpg", "alt": "Cloud architecture"},
+      "publishedAt": "2024-11-28",
+      "readTime": 10,
+      "featured": true
+    },
+    {
+      "id": "3",
+      "slug": "design-systems-that-scale",
+      "title": "Design Systems That Scale: A Practical Guide",
+      "excerpt": "How to create and maintain design systems that grow with your product and team.",
+      "content": "Full article content would go here...",
+      "author": "james-liu",
+      "category": "design",
+      "tags": ["Design Systems", "UI/UX", "Figma", "Components"],
+      "featuredImage": {"url": "/assets/images/blog/design-systems.jpg", "alt": "Design systems"},
+      "publishedAt": "2024-11-25",
+      "readTime": 7,
+      "featured": false
+    },
+    {
+      "id": "4",
+      "slug": "react-native-performance-optimization",
+      "title": "React Native Performance Optimization: The Complete Guide",
+      "excerpt": "Proven techniques to make your React Native apps blazing fast and buttery smooth.",
+      "content": "Full article content would go here...",
+      "author": "alex-reeves",
+      "category": "mobile",
+      "tags": ["React Native", "Performance", "Mobile", "Optimization"],
+      "featuredImage": {"url": "/assets/images/blog/react-native-perf.jpg", "alt": "React Native performance"},
+      "publishedAt": "2024-11-20",
+      "readTime": 12,
+      "featured": false
+    }
+  ]
+}

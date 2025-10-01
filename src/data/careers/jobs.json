@@ -1,0 +1,124 @@
+{
+  "jobs": [
+    {
+      "id": "1",
+      "title": "Senior Full-Stack Engineer",
+      "department": "Engineering",
+      "location": "San Francisco, CA / Remote",
+      "type": "Full-time",
+      "experience": "5+ years",
+      "description": "We're looking for an experienced full-stack engineer to help build cutting-edge web applications for our enterprise clients.",
+      "responsibilities": [
+        "Design and develop scalable web applications using React and Node.js",
+        "Collaborate with designers and product managers to deliver exceptional user experiences",
+        "Mentor junior developers and contribute to technical decisions",
+        "Participate in code reviews and maintain high code quality standards"
+      ],
+      "requirements": [
+        "5+ years of professional software development experience",
+        "Expert knowledge of React, TypeScript, and Node.js",
+        "Experience with cloud platforms (AWS, Azure, or GCP)",
+        "Strong understanding of web performance and security best practices",
+        "Excellent communication and collaboration skills"
+      ],
+      "niceToHave": [
+        "Experience with Next.js and serverless architectures",
+        "Contributions to open-source projects",
+        "Experience leading technical teams",
+        "Knowledge of GraphQL and microservices"
+      ],
+      "benefits": ["Competitive salary", "Health insurance", "401(k)", "Flexible schedule", "Remote work"],
+      "salary": {"min": 140000, "max": 180000, "currency": "USD"},
+      "postedAt": "2024-12-01",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "title": "Mobile Developer (React Native)",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "experience": "3+ years",
+      "description": "Join our mobile team to build beautiful, performant mobile applications that delight users.",
+      "responsibilities": [
+        "Develop and maintain cross-platform mobile applications using React Native",
+        "Collaborate with designers to implement pixel-perfect UIs",
+        "Optimize app performance and ensure smooth user experiences",
+        "Write clean, maintainable code with comprehensive tests"
+      ],
+      "requirements": [
+        "3+ years of React Native development experience",
+        "Strong knowledge of JavaScript/TypeScript",
+        "Experience with mobile app deployment (App Store & Play Store)",
+        "Understanding of mobile design patterns and best practices"
+      ],
+      "niceToHave": [
+        "Native iOS (Swift) or Android (Kotlin) experience",
+        "Experience with animations and gesture handling",
+        "Knowledge of mobile CI/CD pipelines"
+      ],
+      "benefits": ["Competitive salary", "Health insurance", "Remote work", "Learning budget"],
+      "salary": {"min": 120000, "max": 150000, "currency": "USD"},
+      "postedAt": "2024-11-28",
+      "featured": true
+    },
+    {
+      "id": "3",
+      "title": "UI/UX Designer",
+      "department": "Design",
+      "location": "San Francisco, CA / Hybrid",
+      "type": "Full-time",
+      "experience": "4+ years",
+      "description": "We're seeking a talented UI/UX designer to create beautiful, user-centered designs for web and mobile applications.",
+      "responsibilities": [
+        "Design intuitive user interfaces for web and mobile applications",
+        "Conduct user research and usability testing",
+        "Create and maintain design systems and component libraries",
+        "Collaborate closely with developers to ensure design fidelity"
+      ],
+      "requirements": [
+        "4+ years of UI/UX design experience",
+        "Proficiency in Figma and modern design tools",
+        "Strong portfolio demonstrating design thinking and problem-solving",
+        "Understanding of web and mobile design constraints"
+      ],
+      "niceToHave": [
+        "Experience with prototyping tools (Framer, Principle)",
+        "Basic HTML/CSS knowledge",
+        "Motion design skills"
+      ],
+      "benefits": ["Competitive salary", "Health insurance", "Flexible hours", "Design tools budget"],
+      "postedAt": "2024-11-25",
+      "featured": false
+    },
+    {
+      "id": "4",
+      "title": "DevOps Engineer",
+      "department": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "experience": "4+ years",
+      "description": "Help us build and maintain world-class cloud infrastructure and deployment pipelines.",
+      "responsibilities": [
+        "Design and implement CI/CD pipelines",
+        "Manage cloud infrastructure on AWS/Azure",
+        "Automate deployment and scaling processes",
+        "Monitor system performance and ensure high availability"
+      ],
+      "requirements": [
+        "4+ years of DevOps/Infrastructure experience",
+        "Strong knowledge of AWS or Azure",
+        "Experience with Kubernetes and Docker",
+        "Proficiency in Infrastructure as Code (Terraform, CloudFormation)"
+      ],
+      "niceToHave": [
+        "Experience with monitoring tools (DataDog, New Relic)",
+        "Knowledge of security best practices",
+        "Scripting skills (Python, Bash)"
+      ],
+      "benefits": ["Competitive salary", "Health insurance", "Remote work", "Conference attendance"],
+      "postedAt": "2024-11-20",
+      "featured": false
+    }
+  ]
+}

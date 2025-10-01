@@ -1,0 +1,140 @@
+{
+  "hero": {
+    "title": "Our Work Speaks for Itself",
+    "subtitle": "Portfolio of Excellence",
+    "description": "Explore our collection of successful projects that have transformed businesses and delighted users."
+  },
+  "projects": [
+    {
+      "id": "proj-1",
+      "slug": "fintech-platform",
+      "title": "FinTech Trading Platform",
+      "client": "GlobalTrade Inc.",
+      "category": "Web Development",
+      "tags": ["React", "Node.js", "PostgreSQL", "WebSocket", "AWS"],
+      "thumbnail": {"url": "/assets/images/projects/fintech-thumb.jpg", "alt": "FinTech platform"},
+      "images": [
+        {"url": "/assets/images/projects/fintech-1.jpg", "alt": "Dashboard view"},
+        {"url": "/assets/images/projects/fintech-2.jpg", "alt": "Trading interface"},
+        {"url": "/assets/images/projects/fintech-3.jpg", "alt": "Analytics"}
+      ],
+      "shortDescription": "Enterprise-grade trading platform processing $2B+ in daily transactions.",
+      "challenge": "GlobalTrade needed a high-performance trading platform capable of handling millions of concurrent users with real-time data updates and zero downtime.",
+      "solution": "We built a microservices architecture using React for the frontend, Node.js for the backend, and WebSocket for real-time communication. Deployed on AWS with auto-scaling and load balancing.",
+      "results": [
+        {"metric": "Daily Volume", "value": "$2B+"},
+        {"metric": "Active Users", "value": "500K+"},
+        {"metric": "Uptime", "value": "99.99%"},
+        {"metric": "Latency", "value": "<50ms"}
+      ],
+      "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "AWS", "WebSocket"],
+      "testimonial": {
+        "id": "1",
+        "text": "Mikasasoft delivered beyond our expectations. The platform handles our peak loads flawlessly.",
+        "author": "John Davidson",
+        "role": "CTO",
+        "company": "GlobalTrade Inc.",
+        "rating": 5
+      },
+      "featured": true,
+      "date": "2024-03",
+      "industry": "FinTech",
+      "duration": "8 months",
+      "teamSize": 12,
+      "url": "https://globaltrade.example.com"
+    },
+    {
+      "id": "proj-2",
+      "slug": "health-app",
+      "title": "AI-Powered Health App",
+      "client": "MediCare Solutions",
+      "category": "Mobile Development",
+      "tags": ["React Native", "TensorFlow", "Firebase", "AI/ML"],
+      "thumbnail": {"url": "/assets/images/projects/health-app-thumb.jpg", "alt": "Health app"},
+      "images": [
+        {"url": "/assets/images/projects/health-1.jpg", "alt": "App home screen"},
+        {"url": "/assets/images/projects/health-2.jpg", "alt": "AI diagnostics"},
+        {"url": "/assets/images/projects/health-3.jpg", "alt": "Patient dashboard"}
+      ],
+      "shortDescription": "Revolutionary healthcare app with AI diagnostics serving 500K+ patients.",
+      "challenge": "MediCare wanted to make quality healthcare accessible through a mobile app featuring AI-powered preliminary diagnostics and seamless provider connectivity.",
+      "solution": "Built a cross-platform mobile app with React Native, integrated TensorFlow for AI diagnostics, and Firebase for real-time data sync. HIPAA-compliant architecture.",
+      "results": [
+        {"metric": "Downloads", "value": "500K+"},
+        {"metric": "Consultations", "value": "100K/month"},
+        {"metric": "User Rating", "value": "4.8/5"},
+        {"metric": "Diagnosis Accuracy", "value": "94%"}
+      ],
+      "technologies": ["React Native", "TensorFlow", "Firebase", "Node.js", "MongoDB"],
+      "featured": true,
+      "date": "2024-01",
+      "industry": "Healthcare",
+      "duration": "10 months",
+      "teamSize": 8
+    },
+    {
+      "id": "proj-3",
+      "slug": "ecommerce-platform",
+      "title": "Luxury E-Commerce Platform",
+      "client": "Prestige Brands",
+      "category": "Web Development",
+      "tags": ["Next.js", "Three.js", "Stripe", "Shopify", "AR"],
+      "thumbnail": {"url": "/assets/images/projects/ecommerce-thumb.jpg", "alt": "E-commerce platform"},
+      "images": [
+        {"url": "/assets/images/projects/ecommerce-1.jpg", "alt": "Homepage"},
+        {"url": "/assets/images/projects/ecommerce-2.jpg", "alt": "Product 3D view"},
+        {"url": "/assets/images/projects/ecommerce-3.jpg", "alt": "Checkout"}
+      ],
+      "shortDescription": "Premium e-commerce with 3D visualization and AR try-on features.",
+      "challenge": "Prestige Brands needed a luxury shopping experience that showcased high-end products with immersive 3D and augmented reality features.",
+      "solution": "Developed with Next.js for performance, Three.js for 3D product visualization, and AR capabilities. Integrated with Shopify for inventory management.",
+      "results": [
+        {"metric": "Conversion Rate", "value": "+150%"},
+        {"metric": "Cart Value", "value": "+85%"},
+        {"metric": "Page Speed", "value": "95/100"},
+        {"metric": "Revenue Growth", "value": "+200%"}
+      ],
+      "technologies": ["Next.js", "Three.js", "Shopify", "Stripe", "WebAR"],
+      "featured": true,
+      "date": "2023-11",
+      "industry": "E-Commerce",
+      "duration": "6 months",
+      "teamSize": 10
+    },
+    {
+      "id": "proj-4",
+      "slug": "saas-analytics",
+      "title": "SaaS Analytics Dashboard",
+      "client": "DataViz Pro",
+      "category": "Web Development",
+      "tags": ["React", "D3.js", "GraphQL", "MongoDB"],
+      "thumbnail": {"url": "/assets/images/projects/analytics-thumb.jpg", "alt": "Analytics dashboard"},
+      "images": [
+        {"url": "/assets/images/projects/analytics-1.jpg", "alt": "Main dashboard"},
+        {"url": "/assets/images/projects/analytics-2.jpg", "alt": "Data visualization"},
+        {"url": "/assets/images/projects/analytics-3.jpg", "alt": "Reports"}
+      ],
+      "shortDescription": "Real-time analytics platform processing millions of data points.",
+      "challenge": "DataViz Pro needed a powerful analytics platform capable of processing and visualizing massive datasets in real-time with interactive charts.",
+      "solution": "Built with React and D3.js for dynamic visualizations, GraphQL for efficient data queries, and MongoDB for flexible data storage. Optimized for performance.",
+      "results": [
+        {"metric": "Data Points/sec", "value": "1M+"},
+        {"metric": "Users", "value": "50K+"},
+        {"metric": "Query Speed", "value": "<200ms"},
+        {"metric": "Customer Satisfaction", "value": "98%"}
+      ],
+      "technologies": ["React", "D3.js", "GraphQL", "MongoDB", "Node.js"],
+      "featured": false,
+      "date": "2023-09",
+      "industry": "SaaS",
+      "duration": "5 months",
+      "teamSize": 6
+    }
+  ],
+  "categories": [
+    {"id": "1", "name": "Web Development", "slug": "web-development", "description": "Modern web applications", "icon": "globe"},
+    {"id": "2", "name": "Mobile Development", "slug": "mobile-development", "description": "iOS & Android apps", "icon": "smartphone"},
+    {"id": "3", "name": "Cloud Solutions", "slug": "cloud-solutions", "description": "Scalable cloud infrastructure", "icon": "cloud"},
+    {"id": "4", "name": "AI & ML", "slug": "ai-ml", "description": "Intelligent solutions", "icon": "cpu"}
+  ]
+}

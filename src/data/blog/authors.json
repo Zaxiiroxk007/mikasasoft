@@ -1,0 +1,37 @@
+{
+  "authors": [
+    {
+      "id": "alex-reeves",
+      "name": "Alex Reeves",
+      "bio": "CEO & Founder of Mikasasoft. Passionate about technology and its power to transform businesses.",
+      "avatar": {"url": "/assets/images/team/alex-reeves.jpg", "alt": "Alex Reeves"},
+      "role": "CEO",
+      "social": {
+        "twitter": "https://twitter.com/alexreeves",
+        "linkedin": "https://linkedin.com/in/alexreeves"
+      }
+    },
+    {
+      "id": "maria-santos",
+      "name": "Maria Santos",
+      "bio": "CTO at Mikasasoft. Cloud architecture expert and technology evangelist.",
+      "avatar": {"url": "/assets/images/team/maria-santos.jpg", "alt": "Maria Santos"},
+      "role": "CTO",
+      "social": {
+        "twitter": "https://twitter.com/mariasantos",
+        "linkedin": "https://linkedin.com/in/mariasantos"
+      }
+    },
+    {
+      "id": "james-liu",
+      "name": "James Liu",
+      "bio": "Head of Design. Creating delightful experiences one pixel at a time.",
+      "avatar": {"url": "/assets/images/team/james-liu.jpg", "alt": "James Liu"},
+      "role": "Head of Design",
+      "social": {
+        "twitter": "https://twitter.com/jamesliu",
+        "linkedin": "https://linkedin.com/in/jamesliu"
+      }
+    }
+  ]
+}

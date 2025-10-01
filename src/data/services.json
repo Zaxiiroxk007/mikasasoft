@@ -1,0 +1,153 @@
+{
+  "hero": {
+    "title": "Services That Scale",
+    "subtitle": "End-to-End Digital Solutions",
+    "description": "From concept to deployment, we provide comprehensive technology services that power modern businesses."
+  },
+  "services": [
+    {
+      "id": "web-development",
+      "slug": "web-development",
+      "title": "Web Development",
+      "icon": "globe",
+      "shortDescription": "Modern, performant web applications built with cutting-edge frameworks.",
+      "fullDescription": "We build blazing-fast, scalable web applications using the latest technologies. Our expertise spans from simple marketing sites to complex enterprise platforms, all optimized for performance, SEO, and user experience.",
+      "features": [
+        "Next.js & React Development",
+        "Progressive Web Apps (PWA)",
+        "Jamstack Architecture",
+        "Headless CMS Integration",
+        "E-commerce Solutions",
+        "Performance Optimization"
+      ],
+      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js"],
+      "caseStudies": ["proj-1", "proj-3", "proj-4"],
+      "benefits": [
+        "Lightning-fast page loads",
+        "SEO-optimized architecture",
+        "Scalable infrastructure",
+        "Mobile-first design"
+      ]
+    },
+    {
+      "id": "mobile-development",
+      "slug": "mobile-development",
+      "title": "Mobile Development",
+      "icon": "smartphone",
+      "shortDescription": "Native and cross-platform mobile apps that users love.",
+      "fullDescription": "Whether you need a native iOS/Android app or a cross-platform solution, we deliver exceptional mobile experiences that engage users and drive business results.",
+      "features": [
+        "iOS App Development",
+        "Android App Development",
+        "React Native Apps",
+        "Flutter Development",
+        "App Store Optimization",
+        "Push Notifications & Analytics"
+      ],
+      "technologies": ["React Native", "Swift", "Kotlin", "Flutter", "Firebase"],
+      "caseStudies": ["proj-2"],
+      "benefits": [
+        "Native performance",
+        "Offline-first architecture",
+        "Seamless UX across devices",
+        "App store compliance"
+      ]
+    },
+    {
+      "id": "cloud-solutions",
+      "slug": "cloud-solutions",
+      "title": "Cloud & DevOps",
+      "icon": "cloud",
+      "shortDescription": "Scalable cloud infrastructure and automated deployment pipelines.",
+      "fullDescription": "We architect and implement cloud solutions that grow with your business. From migration to optimization, our cloud expertise ensures reliability, security, and cost-efficiency.",
+      "features": [
+        "AWS & Azure Architecture",
+        "Kubernetes & Docker",
+        "CI/CD Pipeline Setup",
+        "Infrastructure as Code",
+        "Cloud Migration",
+        "Performance Monitoring"
+      ],
+      "technologies": ["AWS", "Azure", "Kubernetes", "Docker", "Terraform", "Jenkins"],
+      "caseStudies": ["proj-1", "proj-4"],
+      "benefits": [
+        "99.9% uptime guarantee",
+        "Auto-scaling infrastructure",
+        "Cost optimization",
+        "Enterprise-grade security"
+      ]
+    },
+    {
+      "id": "ui-ux-design",
+      "slug": "ui-ux-design",
+      "title": "UI/UX Design",
+      "icon": "palette",
+      "shortDescription": "Beautiful, intuitive interfaces backed by user research.",
+      "fullDescription": "Great design is invisible. We create user experiences that feel natural, look stunning, and drive conversions through data-driven design decisions.",
+      "features": [
+        "User Research & Testing",
+        "Wireframing & Prototyping",
+        "Design System Creation",
+        "Interaction Design",
+        "Usability Testing",
+        "Brand Identity"
+      ],
+      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle"],
+      "caseStudies": ["proj-2", "proj-3"],
+      "benefits": [
+        "User-centered design",
+        "Increased conversions",
+        "Brand consistency",
+        "Accessibility compliance"
+      ]
+    },
+    {
+      "id": "ai-ml",
+      "slug": "ai-ml",
+      "title": "AI & Machine Learning",
+      "icon": "cpu",
+      "shortDescription": "Intelligent solutions powered by artificial intelligence.",
+      "fullDescription": "Harness the power of AI to automate processes, gain insights, and create innovative features that set you apart from competitors.",
+      "features": [
+        "Predictive Analytics",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Recommendation Systems",
+        "Chatbots & Virtual Assistants",
+        "Model Training & Deployment"
+      ],
+      "technologies": ["TensorFlow", "PyTorch", "scikit-learn", "OpenAI", "Hugging Face"],
+      "caseStudies": ["proj-2", "proj-4"],
+      "benefits": [
+        "Automated workflows",
+        "Data-driven insights",
+        "Personalized experiences",
+        "Competitive advantage"
+      ]
+    },
+    {
+      "id": "consulting",
+      "slug": "consulting",
+      "title": "Technical Consulting",
+      "icon": "briefcase",
+      "shortDescription": "Strategic technology guidance for complex challenges.",
+      "fullDescription": "Sometimes you need expert advice before diving into development. Our consultants provide strategic guidance on architecture, technology selection, and digital transformation.",
+      "features": [
+        "Technology Assessment",
+        "Architecture Planning",
+        "Code Audits",
+        "Performance Optimization",
+        "Security Reviews",
+        "Team Training"
+      ],
+      "technologies": ["Various", "Agnostic Approach"],
+      "caseStudies": ["proj-1"],
+      "benefits": [
+        "Reduced technical debt",
+        "Informed decisions",
+        "Risk mitigation",
+        "Team upskilling"
+      ]
+    }
+  ]
+}

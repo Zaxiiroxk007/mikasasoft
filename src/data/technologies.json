@@ -1,0 +1,51 @@
+{
+  "categories": [
+    {
+      "category": "Frontend",
+      "technologies": [
+        {"id": "react", "name": "React", "icon": "react", "proficiency": 95},
+        {"id": "nextjs", "name": "Next.js", "icon": "nextjs", "proficiency": 95},
+        {"id": "typescript", "name": "TypeScript", "icon": "typescript", "proficiency": 90},
+        {"id": "tailwind", "name": "Tailwind CSS", "icon": "tailwind", "proficiency": 90},
+        {"id": "vue", "name": "Vue.js", "icon": "vue", "proficiency": 85}
+      ]
+    },
+    {
+      "category": "Backend",
+      "technologies": [
+        {"id": "nodejs", "name": "Node.js", "icon": "nodejs", "proficiency": 95},
+        {"id": "python", "name": "Python", "icon": "python", "proficiency": 90},
+        {"id": "graphql", "name": "GraphQL", "icon": "graphql", "proficiency": 85},
+        {"id": "postgresql", "name": "PostgreSQL", "icon": "postgresql", "proficiency": 90},
+        {"id": "mongodb", "name": "MongoDB", "icon": "mongodb", "proficiency": 85}
+      ]
+    },
+    {
+      "category": "Mobile",
+      "technologies": [
+        {"id": "react-native", "name": "React Native", "icon": "react", "proficiency": 90},
+        {"id": "flutter", "name": "Flutter", "icon": "flutter", "proficiency": 85},
+        {"id": "swift", "name": "Swift", "icon": "swift", "proficiency": 80},
+        {"id": "kotlin", "name": "Kotlin", "icon": "kotlin", "proficiency": 80}
+      ]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "technologies": [
+        {"id": "aws", "name": "AWS", "icon": "aws", "proficiency": 95},
+        {"id": "azure", "name": "Azure", "icon": "azure", "proficiency": 85},
+        {"id": "docker", "name": "Docker", "icon": "docker", "proficiency": 90},
+        {"id": "kubernetes", "name": "Kubernetes", "icon": "kubernetes", "proficiency": 85},
+        {"id": "terraform", "name": "Terraform", "icon": "terraform", "proficiency": 85}
+      ]
+    },
+    {
+      "category": "AI & ML",
+      "technologies": [
+        {"id": "tensorflow", "name": "TensorFlow", "icon": "tensorflow", "proficiency": 85},
+        {"id": "pytorch", "name": "PyTorch", "icon": "pytorch", "proficiency": 80},
+        {"id": "openai", "name": "OpenAI", "icon": "openai", "proficiency": 90}
+      ]
+    }
+  ]
+}

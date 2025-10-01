@@ -1,0 +1,10 @@
+{
+  "categories": [
+    {"id": "web-dev", "name": "Web Development", "slug": "web-development", "description": "Insights on modern web development", "color": "#2D5F4C"},
+    {"id": "mobile", "name": "Mobile", "slug": "mobile", "description": "Mobile app development trends", "color": "#B8945F"},
+    {"id": "cloud", "name": "Cloud & DevOps", "slug": "cloud-devops", "description": "Cloud infrastructure and DevOps practices", "color": "#8B2635"},
+    {"id": "ai-ml", "name": "AI & ML", "slug": "ai-ml", "description": "Artificial intelligence and machine learning", "color": "#5A6D6A"},
+    {"id": "design", "name": "Design", "slug": "design", "description": "UI/UX design and best practices", "color": "#D4AF37"},
+    {"id": "business", "name": "Business", "slug": "business", "description": "Tech business insights", "color": "#C4524C"}
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "steps": [
+    {
+      "id": "1",
+      "step": 1,
+      "title": "Discovery & Planning",
+      "description": "We start by understanding your vision, goals, and challenges. Through collaborative workshops, we define requirements and create a strategic roadmap.",
+      "icon": "compass",
+      "duration": "1-2 weeks"
+    },
+    {
+      "id": "2",
+      "step": 2,
+      "title": "Design & Prototyping",
+      "description": "Our designers create wireframes and interactive prototypes, ensuring the user experience is intuitive and aligned with your brand.",
+      "icon": "pen-tool",
+      "duration": "2-3 weeks"
+    },
+    {
+      "id": "3",
+      "step": 3,
+      "title": "Development",
+      "description": "Our engineers bring designs to life using agile methodologies. You'll see progress in bi-weekly sprints with continuous feedback loops.",
+      "icon": "code",
+      "duration": "6-12 weeks"
+    },
+    {
+      "id": "4",
+      "step": 4,
+      "title": "Testing & QA",
+      "description": "Rigorous testing ensures your product is bug-free, performant, and meets all requirements before launch.",
+      "icon": "check-circle",
+      "duration": "1-2 weeks"
+    },
+    {
+      "id": "5",
+      "step": 5,
+      "title": "Deployment",
+      "description": "We handle the entire deployment process, from infrastructure setup to go-live, ensuring a smooth launch.",
+      "icon": "rocket",
+      "duration": "1 week"
+    },
+    {
+      "id": "6",
+      "step": 6,
+      "title": "Support & Optimization",
+      "description": "Post-launch, we provide ongoing support, monitoring, and optimization to ensure continued success.",
+      "icon": "trending-up",
+      "duration": "Ongoing"
+    }
+  ]
+}

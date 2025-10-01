@@ -1,0 +1,45 @@
+{
+  "categories": [
+    {
+      "category": "Health & Wellness",
+      "benefits": [
+        {"id": "1", "title": "Health Insurance", "description": "Comprehensive medical, dental, and vision coverage", "icon": "heart", "category": "Health & Wellness"},
+        {"id": "2", "title": "Mental Health Support", "description": "Access to therapy and mental wellness programs", "icon": "brain", "category": "Health & Wellness"},
+        {"id": "3", "title": "Fitness Stipend", "description": "$100/month for gym memberships or fitness activities", "icon": "activity", "category": "Health & Wellness"}
+      ]
+    },
+    {
+      "category": "Financial",
+      "benefits": [
+        {"id": "4", "title": "Competitive Salary", "description": "Top-of-market compensation packages", "icon": "dollar-sign", "category": "Financial"},
+        {"id": "5", "title": "401(k) Matching", "description": "Company match up to 6% of salary", "icon": "trending-up", "category": "Financial"},
+        {"id": "6", "title": "Stock Options", "description": "Equity participation for all employees", "icon": "pie-chart", "category": "Financial"}
+      ]
+    },
+    {
+      "category": "Work-Life Balance",
+      "benefits": [
+        {"id": "7", "title": "Flexible Schedule", "description": "Work when you're most productive", "icon": "clock", "category": "Work-Life Balance"},
+        {"id": "8", "title": "Remote Work", "description": "Work from anywhere in the world", "icon": "home", "category": "Work-Life Balance"},
+        {"id": "9", "title": "Unlimited PTO", "description": "Take time off when you need it", "icon": "calendar", "category": "Work-Life Balance"},
+        {"id": "10", "title": "Parental Leave", "description": "16 weeks paid leave for new parents", "icon": "users", "category": "Work-Life Balance"}
+      ]
+    },
+    {
+      "category": "Growth & Development",
+      "benefits": [
+        {"id": "11", "title": "Learning Budget", "description": "$2,000/year for courses, books, and conferences", "icon": "book", "category": "Growth & Development"},
+        {"id": "12", "title": "Conference Attendance", "description": "Annual budget for industry conferences", "icon": "briefcase", "category": "Growth & Development"},
+        {"id": "13", "title": "Mentorship Program", "description": "Paired with senior team members for growth", "icon": "user-check", "category": "Growth & Development"}
+      ]
+    },
+    {
+      "category": "Perks",
+      "benefits": [
+        {"id": "14", "title": "Latest Tech", "description": "MacBook Pro and accessories of your choice", "icon": "laptop", "category": "Perks"},
+        {"id": "15", "title": "Team Events", "description": "Regular team outings and annual retreats", "icon": "coffee", "category": "Perks"},
+        {"id": "16", "title": "Home Office Setup", "description": "$1,500 budget for your home workspace", "icon": "monitor", "category": "Perks"}
+      ]
+    }
+  ]
+}
