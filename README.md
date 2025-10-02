@@ -1,36 +1,204 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mikasasoft
 
-## Getting Started
+> Building Defenses, Breaking Boundaries
 
-First, run the development server:
+A premium, luxury company profile website with subtle Attack on Titan theme elements, built with Next.js 14 and modern web technologies.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🎯 Overview
+
+Mikasasoft is a high-end corporate website featuring:
+
+- **Premium Design System** - Glassmorphism, gradient meshes, and sophisticated animations
+- **AOT-Inspired Aesthetics** - Military brass, Survey Corps emerald, and titan crimson palette
+- **Data-Driven Architecture** - Fully dynamic content powered by JSON schemas
+- **Advanced Animations** - GSAP, Framer Motion, Three.js, and particle systems
+- **Exceptional UX** - Smooth scroll, magnetic cursors, and micro-interactions
+
+## 🚀 Tech Stack
+
+### Core
+- **Next.js 14** - App Router, SSR, and optimal performance
+- **TypeScript** - Full type safety across the stack
+- **Tailwind CSS** - Utility-first styling with custom theme
+
+### Animations & Effects
+- **Framer Motion** - Smooth React animations
+- **GSAP + ScrollTrigger** - Advanced scroll-based animations
+- **Three.js** - 3D effects and interactive elements
+- **Lenis** - Smooth scrolling experience
+
+### UI Components
+- **shadcn/ui** - Accessible, customizable components
+- **Radix UI** - Unstyled, accessible primitives
+- **Lucide React** - Beautiful icon library
+
+### Development
+- **React Hook Form + Zod** - Form handling and validation
+- **ESLint + Prettier** - Code quality and formatting
+- **pnpm** - Fast, efficient package management
+
+## 🎨 Premium Color Palette
+
+### Dark Theme (Primary)
+```
+Background Layers:
+- Deep Midnight: #0A0E12
+- Obsidian: #141821
+- Graphite: #1E2530
+- Slate: #2A3441
+
+Brand Colors:
+- Survey Corps Emerald: #2D5F4C
+- Military Brass: #B8945F
+- Titan Crimson: #8B2635
+- Steel Sage: #5A6D6A
+
+Text Colors:
+- Pure White: #FFFFFF
+- Platinum: #E8E8E8
+- Silver: #B8BCC4
+- Ash: #7A8088
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+mikasasoft/
+├── src/
+│   ├── app/              # Next.js 14 App Router
+│   │   ├── page.tsx      # Homepage
+│   │   ├── about/        # About page
+│   │   ├── services/     # Services page
+│   │   ├── portfolio/    # Portfolio & projects
+│   │   ├── blog/         # Blog system
+│   │   ├── careers/      # Careers page
+│   │   └── contact/      # Contact page
+│   │
+│   ├── components/
+│   │   ├── ui/           # Base UI components (shadcn/ui)
+│   │   ├── common/       # Reusable components
+│   │   ├── sections/     # Page-specific sections
+│   │   └── providers/    # Context providers
+│   │
+│   ├── lib/
+│   │   ├── utils/        # Utility functions
+│   │   ├── hooks/        # Custom React hooks
+│   │   ├── data/         # Data fetchers and parsers
+│   │   └── constants/    # App constants
+│   │
+│   ├── types/            # TypeScript definitions
+│   ├── styles/           # Global styles
+│   └── data/             # JSON data files
+│
+├── public/
+│   └── assets/           # Images, videos, 3D models
+└── ...config files
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏃 Getting Started
 
-## Learn More
+### Prerequisites
+- Node.js 18.x or higher
+- pnpm (recommended) or npm
 
-To learn more about Next.js, take a look at the following resources:
+### Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Clone the repository
+git clone <repository-url>
+cd mikasasoft
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Install dependencies
+pnpm install
 
-## Deploy on Vercel
+# Run development server
+pnpm dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Available Scripts
+
+```bash
+pnpm dev          # Start development server
+pnpm build        # Build for production
+pnpm start        # Start production server
+pnpm lint         # Run ESLint
+pnpm format       # Format with Prettier
+```
+
+## 🎭 Key Features
+
+### Premium UI Components
+- **Glass Morphism Cards** - Frosted glass effect with backdrop blur
+- **Magnetic Buttons** - Interactive hover effects
+- **3D Tilt Effects** - Mouse-responsive card tilting
+- **Animated Counters** - Scroll-triggered number animations
+- **Particle Systems** - Dynamic background effects
+- **Custom Cursor** - Gradient ring cursor follower
+
+### Advanced Animations
+- **Page Transitions** - Smooth route changes
+- **Scroll Reveals** - Elements animate into view
+- **Parallax Effects** - Multi-depth scrolling
+- **Gradient Mesh** - Animated background gradients
+- **Stagger Animations** - Sequential element reveals
+
+### Responsive Design
+- Mobile-first approach
+- Touch-optimized interactions
+- Adaptive layouts for all screen sizes
+- Performance-conscious mobile animations
+
+## 🗂️ Data Architecture
+
+All content is managed through JSON files in `/src/data`:
+
+- `site-config.json` - Global site configuration
+- `homepage.json` - Homepage sections
+- `services.json` - Service offerings
+- `projects.json` - Portfolio projects
+- `team.json` - Team members
+- `blog/posts.json` - Blog articles
+- `careers/jobs.json` - Job listings
+- `contact.json` - Contact information
+
+### Type Safety
+Every data schema has corresponding TypeScript interfaces for full type safety.
+
+## ♿ Accessibility
+
+- WCAG 2.1 AA compliant
+- Semantic HTML5 structure
+- Keyboard navigation support
+- Screen reader optimized
+- Reduced motion support (`prefers-reduced-motion`)
+- High contrast mode
+
+## 🚀 Performance
+
+Target Metrics:
+- Lighthouse Score: 90+
+- Largest Contentful Paint (LCP): <2s
+- First Input Delay (FID): <100ms
+- Cumulative Layout Shift (CLS): <0.1
+
+Optimizations:
+- Image optimization (WebP/AVIF)
+- Code splitting and lazy loading
+- Tree shaking and bundle optimization
+- GPU-accelerated animations
+
+## 📄 License
+
+[Add your license here]
+
+## 🤝 Contributing
+
+[Add contribution guidelines]
+
+---
+
+**Built with precision. Designed with passion.**
+
+*Inspired by the walls that protect, built to break boundaries.*

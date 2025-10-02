@@ -5,57 +5,76 @@ import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/common/Layout";
-import { GradientText } from "@/components/common/Typography";
+import { ParticleSystem } from "@/components/common/Effects/ParticleSystem";
+import { GradientMesh } from "@/components/common/Effects/GradientMesh";
+import { useAnimatedCounter } from "@/lib/hooks/useAnimatedCounter";
 import type { HeroSection } from "@/types";
 
 interface HomeHeroProps {
   data: HeroSection;
 }
 
+function AnimatedStat({ value, label }: { value: number; label: string }) {
+  const { count, ref } = useAnimatedCounter(value);
+
+  return (
+    <div ref={ref} className="text-center">
+      <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald via-brass to-gold bg-clip-text text-transparent mb-2">
+        {count}+
+      </div>
+      <div className="text-sm md:text-base text-silver uppercase tracking-wider font-medium">{label}</div>
+    </div>
+  );
+}
+
 export function HomeHero({ data }: HomeHeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-deep-midnight via-obsidian to-deep-midnight">
-      {/* Animated Background Grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(rgba(45, 95, 76, 0.1) 1px, transparent 1px),
-                           linear-gradient(90deg, rgba(45, 95, 76, 0.1) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
-        }} />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep-midnight pt-24 md:pt-0">
+      {/* Animated Background Effects */}
+      <GradientMesh />
+      <ParticleSystem />
 
-      <Container className="relative z-10 pt-32 pb-20">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Subtitle */}
+      {/* Radial gradient overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(10,14,18,0.8)_100%)]" />
+
+      <Container size="xl" className="relative z-10 py-12 md:py-20">
+        <div className="text-center w-full">
+          {/* Subtitle Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-8"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-emerald/10 border border-emerald/20 text-emerald text-sm font-medium">
+            <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-card border border-emerald/30 text-emerald text-sm md:text-base font-semibold tracking-wide shadow-glow-green">
+              <span className="w-2 h-2 bg-emerald rounded-full animate-pulse" />
               {data.subtitle}
             </span>
           </motion.div>
 
-          {/* Main Title */}
+          {/* Main Title with Gradient */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-6 leading-tight"
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-black mb-10 leading-[1.05] tracking-tight"
+            style={{ textShadow: "0 2px 20px rgba(0,0,0,0.3)" }}
           >
-            <GradientText as="span" className="block">
-              {data.title}
-            </GradientText>
+            <span className="bg-gradient-to-r from-pure-white via-platinum to-pure-white bg-clip-text text-transparent">
+              {data.title.split(',')[0]},
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-emerald via-brass to-gold bg-clip-text text-transparent">
+              {data.title.split(',')[1]}
+            </span>
           </motion.h1>
 
           {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg md:text-xl text-silver mb-12 max-w-3xl mx-auto leading-relaxed"
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            className="text-xl md:text-2xl lg:text-3xl text-platinum mb-14 leading-relaxed"
           >
             {data.description}
           </motion.p>
@@ -64,44 +83,35 @@ export function HomeHero({ data }: HomeHeroProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
           >
             {data.cta.map((button, index) => (
               <Button
                 key={index}
                 asChild
                 variant={button.variant as "primary" | "secondary"}
-                size="lg"
+                size="xl"
               >
                 <Link href={button.href || "#"} className="group">
                   {button.text}
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={22} />
                 </Link>
               </Button>
             ))}
           </motion.div>
 
-          {/* Stats Preview */}
+          {/* Animated Stats */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
+            transition={{ duration: 1, delay: 0.7 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full pt-8 border-t border-emerald/20"
           >
-            {[
-              { value: "250+", label: "Projects" },
-              { value: "180+", label: "Clients" },
-              { value: "45+", label: "Team" },
-              { value: "12+", label: "Years" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold gradient-text mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-silver">{stat.label}</div>
-              </div>
-            ))}
+            <AnimatedStat value={250} label="Projects" />
+            <AnimatedStat value={180} label="Clients" />
+            <AnimatedStat value={45} label="Team" />
+            <AnimatedStat value={12} label="Years" />
           </motion.div>
         </div>
 
@@ -109,23 +119,19 @@ export function HomeHero({ data }: HomeHeroProps) {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          transition={{ duration: 1, delay: 1 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-2 text-silver"
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="flex flex-col items-center gap-2 cursor-pointer group"
           >
-            <span className="text-sm">Scroll to explore</span>
-            <ChevronDown size={24} />
+            <span className="text-xs text-silver/60 uppercase tracking-wider font-medium">Scroll</span>
+            <ChevronDown className="text-emerald w-6 h-6 group-hover:text-brass transition-colors" />
           </motion.div>
         </motion.div>
       </Container>
-
-      {/* Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brass/20 rounded-full blur-3xl animate-pulse delay-1000" />
     </section>
   );
 }

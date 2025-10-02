@@ -10,17 +10,17 @@ export interface SectionProps extends React.HTMLAttributes<HTMLElement> {
  * Section wrapper component with consistent spacing
  */
 export const Section = forwardRef<HTMLElement, SectionProps>(
-  ({ className, spacing = "lg", background = "default", children, ...props }, ref) => {
+  ({ className, spacing = "xl", background = "default", children, ...props }, ref) => {
     return (
       <section
         ref={ref}
         className={cn(
           "relative w-full",
           {
-            "py-8 md:py-12": spacing === "sm",
-            "py-12 md:py-16": spacing === "md",
-            "py-16 md:py-24": spacing === "lg",
-            "py-20 md:py-32": spacing === "xl",
+            "py-12 md:py-16": spacing === "sm",
+            "py-16 md:py-20": spacing === "md",
+            "py-20 md:py-28": spacing === "lg",
+            "py-24 md:py-32 lg:py-40": spacing === "xl",
             "py-0": spacing === "none",
           },
           {

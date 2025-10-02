@@ -7,6 +7,8 @@ import {
 } from "next/font/google";
 import { Navbar } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
+import { ScrollProgress } from "@/components/common/Interactive/ScrollProgress";
+import { SmoothScroll } from "@/components/common/Interactive/SmoothScroll";
 import "./globals.css";
 
 // Premium Fonts Configuration
@@ -91,13 +93,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="w-full">
       <body
-        className={`${playfair.variable} ${montserrat.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${playfair.variable} ${montserrat.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased w-full`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <ScrollProgress />
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
