@@ -1,0 +1,218 @@
+{
+  "hero": {
+    "title": "Insights & Innovation",
+    "subtitle": "From the Mikasasoft Blog",
+    "description": "Expert perspectives on technology, development, and digital transformation."
+  },
+  "posts": [
+    {
+      "id": "1",
+      "slug": "building-scalable-microservices",
+      "title": "Building Scalable Microservices with Node.js",
+      "excerpt": "Learn how to architect and deploy production-ready microservices that scale effortlessly with your business.",
+      "content": "Microservices architecture has become the de facto standard for building large-scale applications. In this comprehensive guide, we'll explore best practices for building scalable microservices using Node.js...",
+      "thumbnail": {
+        "url": "/assets/images/blog/microservices-thumb.jpg",
+        "alt": "Microservices architecture"
+      },
+      "author": "maria-santos",
+      "category": "backend",
+      "tags": ["Node.js", "Microservices", "Architecture", "DevOps"],
+      "publishDate": "2024-09-15",
+      "readTime": 8,
+      "featured": true,
+      "views": 12500
+    },
+    {
+      "id": "2",
+      "slug": "modern-react-patterns",
+      "title": "Modern React Patterns for 2024",
+      "excerpt": "Discover the latest React patterns and best practices that will make your applications more maintainable and performant.",
+      "content": "React continues to evolve, and with it, the patterns we use to build applications. Let's explore the most important patterns every React developer should know in 2024...",
+      "thumbnail": {
+        "url": "/assets/images/blog/react-patterns-thumb.jpg",
+        "alt": "React patterns"
+      },
+      "author": "sophia-anderson",
+      "category": "frontend",
+      "tags": ["React", "JavaScript", "Frontend", "Best Practices"],
+      "publishDate": "2024-09-10",
+      "readTime": 10,
+      "featured": true,
+      "views": 15800
+    },
+    {
+      "id": "3",
+      "slug": "ai-ml-business-applications",
+      "title": "AI & ML: Practical Business Applications",
+      "excerpt": "How modern businesses are leveraging artificial intelligence and machine learning to drive real results.",
+      "content": "Artificial intelligence is no longer science fiction—it's a practical tool that businesses of all sizes can leverage. Here's how to get started...",
+      "thumbnail": {
+        "url": "/assets/images/blog/ai-ml-thumb.jpg",
+        "alt": "AI and ML applications"
+      },
+      "author": "alex-reeves",
+      "category": "ai-ml",
+      "tags": ["AI", "Machine Learning", "Business", "Innovation"],
+      "publishDate": "2024-09-05",
+      "readTime": 12,
+      "featured": true,
+      "views": 18200
+    },
+    {
+      "id": "4",
+      "slug": "ux-design-principles",
+      "title": "10 UX Design Principles That Drive Conversions",
+      "excerpt": "Evidence-based design principles that will transform your user experience and boost conversion rates.",
+      "content": "Great UX design isn't just about aesthetics—it's about creating experiences that convert. Here are 10 principles backed by data and user research...",
+      "thumbnail": {
+        "url": "/assets/images/blog/ux-principles-thumb.jpg",
+        "alt": "UX design principles"
+      },
+      "author": "james-liu",
+      "category": "design",
+      "tags": ["UX", "Design", "Conversion", "User Research"],
+      "publishDate": "2024-08-28",
+      "readTime": 7,
+      "featured": false,
+      "views": 9500
+    },
+    {
+      "id": "5",
+      "slug": "cloud-migration-guide",
+      "title": "The Complete Guide to Cloud Migration",
+      "excerpt": "Everything you need to know about migrating your infrastructure to the cloud safely and efficiently.",
+      "content": "Cloud migration can be daunting, but with the right strategy and approach, it can transform your business. This comprehensive guide covers everything from planning to execution...",
+      "thumbnail": {
+        "url": "/assets/images/blog/cloud-migration-thumb.jpg",
+        "alt": "Cloud migration"
+      },
+      "author": "maria-santos",
+      "category": "cloud-devops",
+      "tags": ["Cloud", "AWS", "Migration", "DevOps"],
+      "publishDate": "2024-08-20",
+      "readTime": 15,
+      "featured": false,
+      "views": 11200
+    },
+    {
+      "id": "6",
+      "slug": "mobile-app-performance",
+      "title": "Optimizing Mobile App Performance",
+      "excerpt": "Proven techniques to make your React Native apps faster and more responsive.",
+      "content": "Performance is critical for mobile apps. Users expect instant responses and smooth interactions. Here's how to deliver that experience...",
+      "thumbnail": {
+        "url": "/assets/images/blog/mobile-performance-thumb.jpg",
+        "alt": "Mobile app performance"
+      },
+      "author": "sophia-anderson",
+      "category": "mobile",
+      "tags": ["React Native", "Performance", "Mobile", "Optimization"],
+      "publishDate": "2024-08-12",
+      "readTime": 9,
+      "featured": false,
+      "views": 8700
+    }
+  ],
+  "categories": [
+    {
+      "id": "frontend",
+      "name": "Frontend Development",
+      "slug": "frontend",
+      "description": "Modern web development with React, Vue, and more",
+      "icon": "monitor"
+    },
+    {
+      "id": "backend",
+      "name": "Backend & APIs",
+      "slug": "backend",
+      "description": "Server-side development and API design",
+      "icon": "server"
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile Development",
+      "slug": "mobile",
+      "description": "iOS, Android, and cross-platform apps",
+      "icon": "smartphone"
+    },
+    {
+      "id": "cloud-devops",
+      "name": "Cloud & DevOps",
+      "slug": "cloud-devops",
+      "description": "Infrastructure, deployment, and automation",
+      "icon": "cloud"
+    },
+    {
+      "id": "ai-ml",
+      "name": "AI & Machine Learning",
+      "slug": "ai-ml",
+      "description": "Artificial intelligence and data science",
+      "icon": "cpu"
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "slug": "design",
+      "description": "UI/UX design and user experience",
+      "icon": "palette"
+    }
+  ],
+  "authors": [
+    {
+      "id": "alex-reeves",
+      "name": "Alex Reeves",
+      "role": "CEO & Founder",
+      "bio": "Visionary leader with 15+ years in software development. Passionate about innovation and building products that matter.",
+      "avatar": {
+        "url": "/assets/images/authors/alex-reeves.jpg",
+        "alt": "Alex Reeves"
+      },
+      "social": {
+        "twitter": "https://twitter.com/alexreeves",
+        "linkedin": "https://linkedin.com/in/alexreeves"
+      }
+    },
+    {
+      "id": "maria-santos",
+      "name": "Maria Santos",
+      "role": "CTO",
+      "bio": "Tech innovator specializing in scalable architectures and cloud infrastructure.",
+      "avatar": {
+        "url": "/assets/images/authors/maria-santos.jpg",
+        "alt": "Maria Santos"
+      },
+      "social": {
+        "twitter": "https://twitter.com/mariasantos",
+        "linkedin": "https://linkedin.com/in/mariasantos"
+      }
+    },
+    {
+      "id": "james-liu",
+      "name": "James Liu",
+      "role": "Head of Design",
+      "bio": "Award-winning designer creating intuitive, beautiful interfaces.",
+      "avatar": {
+        "url": "/assets/images/authors/james-liu.jpg",
+        "alt": "James Liu"
+      },
+      "social": {
+        "twitter": "https://twitter.com/jamesliu",
+        "linkedin": "https://linkedin.com/in/jamesliu"
+      }
+    },
+    {
+      "id": "sophia-anderson",
+      "name": "Sophia Anderson",
+      "role": "Senior Full-Stack Engineer",
+      "bio": "Full-stack expert specializing in React, Node.js, and cloud technologies.",
+      "avatar": {
+        "url": "/assets/images/authors/sophia-anderson.jpg",
+        "alt": "Sophia Anderson"
+      },
+      "social": {
+        "linkedin": "https://linkedin.com/in/sophiaanderson"
+      }
+    }
+  ]
+}
