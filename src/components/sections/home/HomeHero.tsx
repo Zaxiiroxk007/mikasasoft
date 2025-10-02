@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/common/Layout";
 import { ParticleSystem } from "@/components/common/Effects/ParticleSystem";
@@ -19,25 +19,25 @@ function AnimatedStat({ value, label }: { value: number; label: string }) {
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald via-brass to-gold bg-clip-text text-transparent mb-2">
+      <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 drop-shadow-lg">
         {count}+
       </div>
-      <div className="text-sm md:text-base text-silver uppercase tracking-wider font-medium">{label}</div>
+      <div className="text-sm md:text-base text-zinc-300 uppercase tracking-wider font-medium">{label}</div>
     </div>
   );
 }
 
 export function HomeHero({ data }: HomeHeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-deep-midnight pt-24 md:pt-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-zinc-950 pt-24 md:pt-0">
       {/* Animated Background Effects */}
       <GradientMesh />
       <ParticleSystem />
 
       {/* Radial gradient overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(10,14,18,0.8)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_0%,_rgba(10,10,11,0.8)_100%)]" />
 
-      <Container size="xl" className="relative z-10 py-12 md:py-20">
+      <Container size="xl" className="relative z-10 pt-24 pb-12 md:pt-28 md:pb-12">
         <div className="text-center w-full">
           {/* Subtitle Badge */}
           <motion.div
@@ -46,8 +46,8 @@ export function HomeHero({ data }: HomeHeroProps) {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-8"
           >
-            <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-card border border-emerald/30 text-emerald text-sm md:text-base font-semibold tracking-wide shadow-glow-green">
-              <span className="w-2 h-2 bg-emerald rounded-full animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-card border border-blue-500/30 text-blue-400 text-sm md:text-base font-semibold tracking-wide shadow-lg shadow-blue-500/20">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
               {data.subtitle}
             </span>
           </motion.div>
@@ -57,15 +57,15 @@ export function HomeHero({ data }: HomeHeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-black mb-10 leading-[1.05] tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-10 leading-[1.05] tracking-tight"
             style={{ textShadow: "0 2px 20px rgba(0,0,0,0.3)" }}
           >
-            <span className="bg-gradient-to-r from-pure-white via-platinum to-pure-white bg-clip-text text-transparent">
-              {data.title.split(',')[0]},
+            <span className="text-white">
+              Building Defenses
             </span>
             <br />
-            <span className="bg-gradient-to-r from-emerald via-brass to-gold bg-clip-text text-transparent">
-              {data.title.split(',')[1]}
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
+              Breaking Boundaries
             </span>
           </motion.h1>
 
@@ -74,7 +74,7 @@ export function HomeHero({ data }: HomeHeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="text-xl md:text-2xl lg:text-3xl text-platinum mb-14 leading-relaxed"
+            className="text-lg md:text-xl lg:text-2xl text-zinc-200 mb-14 leading-relaxed max-w-4xl mx-auto font-light"
           >
             {data.description}
           </motion.p>
@@ -84,7 +84,7 @@ export function HomeHero({ data }: HomeHeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
+            className="flex flex-col sm:flex-row gap-5 justify-center items-stretch sm:items-center mb-24"
           >
             {data.cta.map((button, index) => (
               <Button
@@ -92,8 +92,9 @@ export function HomeHero({ data }: HomeHeroProps) {
                 asChild
                 variant={button.variant as "primary" | "secondary"}
                 size="xl"
+                className="min-w-[200px] justify-center"
               >
-                <Link href={button.href || "#"} className="group">
+                <Link href={button.href || "#"} className="group flex items-center justify-center">
                   {button.text}
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={22} />
                 </Link>
@@ -106,7 +107,7 @@ export function HomeHero({ data }: HomeHeroProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.7 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 w-full pt-8 border-t border-emerald/20"
+            className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-16 lg:gap-20 w-full pt-12 border-t border-zinc-800/50"
           >
             <AnimatedStat value={250} label="Projects" />
             <AnimatedStat value={180} label="Clients" />
@@ -115,22 +116,6 @@ export function HomeHero({ data }: HomeHeroProps) {
           </motion.div>
         </div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center gap-2 cursor-pointer group"
-          >
-            <span className="text-xs text-silver/60 uppercase tracking-wider font-medium">Scroll</span>
-            <ChevronDown className="text-emerald w-6 h-6 group-hover:text-brass transition-colors" />
-          </motion.div>
-        </motion.div>
       </Container>
     </section>
   );
