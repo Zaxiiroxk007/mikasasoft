@@ -61,7 +61,7 @@ export const ContactForm = ({ data }: ContactFormProps) => {
         projectType: '',
         message: ''
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -109,7 +109,7 @@ export const ContactForm = ({ data }: ContactFormProps) => {
               fontSize: 'clamp(2.5rem, 5vw, 4rem)',
               lineHeight: '1.1'
             }}>
-              <span className="text-white">Let's Start</span>
+              <span className="text-white">Let&apos;s Start</span>
               <br />
               <span className="bg-gradient-to-r from-red-400 via-purple-500 to-blue-400 bg-clip-text text-transparent">
                 Your Project

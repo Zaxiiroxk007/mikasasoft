@@ -33,19 +33,18 @@ export function Footer() {
       </div>
 
       <Container size="xl" className="relative z-10">
-        <div className="py-16 md:py-20">
+        <div className="py-12 md:py-16">
           {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 xl:gap-20 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 xl:gap-16 mb-12">
             {/* Company Info */}
             <motion.div {...fadeInUp}>
-              <Link href="/" className="inline-block mb-6 group">
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+              <Link href="/" className="inline-block mb-4 group">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
                   Mikasasoft
                 </h3>
               </Link>
-              <p className="text-zinc-300 text-sm leading-relaxed mb-6">
-                Building Defenses, Breaking Boundaries. Premium software development for
-                visionary companies.
+              <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                Building Defenses, Breaking Boundaries.
               </p>
               <div className="flex items-center gap-2 text-blue-400">
                 <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
@@ -57,10 +56,10 @@ export function Footer() {
 
             {/* Quick Links */}
             <motion.div {...fadeInUp} transition={{ delay: 0.1, duration: 0.5 }}>
-              <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">
+              <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-widest">
                 Quick Links
               </h4>
-              <ul className="space-y-3.5">
+              <ul className="space-y-2.5">
                 {[
                   { label: "About Us", href: "/about" },
                   { label: "Services", href: "/services" },
@@ -82,10 +81,10 @@ export function Footer() {
 
             {/* Resources */}
             <motion.div {...fadeInUp} transition={{ delay: 0.2, duration: 0.5 }}>
-              <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">
+              <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-widest">
                 Resources
               </h4>
-              <ul className="space-y-3.5">
+              <ul className="space-y-2.5">
                 {[
                   { label: "Blog", href: "/blog" },
                   { label: "Contact", href: "/contact" },
@@ -107,10 +106,10 @@ export function Footer() {
 
             {/* Contact */}
             <motion.div {...fadeInUp} transition={{ delay: 0.3, duration: 0.5 }}>
-              <h4 className="text-white font-bold mb-6 text-sm uppercase tracking-widest">
+              <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-widest">
                 Get in Touch
               </h4>
-              <ul className="space-y-4 text-sm">
+              <ul className="space-y-3 text-sm">
                 <li>
                   <a
                     href="mailto:contact@mikasasoft.com"
@@ -136,7 +135,7 @@ export function Footer() {
               </ul>
 
               {/* Social Links */}
-              <div className="mt-8 flex gap-3">
+              <div className="mt-6 flex gap-3">
                 {[
                   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
                   { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },

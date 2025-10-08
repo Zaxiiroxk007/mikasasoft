@@ -7,8 +7,12 @@ export default function PortfolioPage() {
     <main className="min-h-screen">
       <PortfolioHero data={projectsData.hero} />
       <PortfolioGrid
-        projects={projectsData.projects}
-        categories={projectsData.categories}
+        projects={projectsData.projects.map(project => ({
+          ...project,
+          description: project.shortDescription,
+          image: project.thumbnail.url,
+          year: project.date.split('-')[0]
+        }))}
       />
     </main>
   );

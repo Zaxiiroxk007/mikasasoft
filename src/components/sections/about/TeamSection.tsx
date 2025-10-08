@@ -2,19 +2,24 @@
 
 import { motion } from 'framer-motion';
 import { Linkedin, Github, Twitter } from 'lucide-react';
-import Image from 'next/image';
 
 interface TeamMember {
   id: string;
   name: string;
   role: string;
+  department?: string;
   bio: string;
-  image: string;
+  image: {
+    url: string;
+    alt: string;
+  };
   social: {
     linkedin?: string;
     github?: string;
     twitter?: string;
   };
+  featured?: boolean;
+  skills?: string[];
 }
 
 interface TeamSectionProps {

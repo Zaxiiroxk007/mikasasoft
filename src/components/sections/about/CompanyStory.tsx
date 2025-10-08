@@ -81,7 +81,7 @@ export const CompanyStory = ({ story }: CompanyStoryProps) => {
               fontSize: 'clamp(2.5rem, 5vw, 4rem)',
               lineHeight: '1.1'
             }}>
-              <span className="text-white">Building Tomorrow's</span>
+              <span className="text-white">Building Tomorrow&apos;s</span>
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 bg-clip-text text-transparent">
                 Digital Legacy
@@ -102,7 +102,7 @@ export const CompanyStory = ({ story }: CompanyStoryProps) => {
             }}>
               {/* Quote decoration */}
               <div className="absolute top-8 left-8 text-blue-400 opacity-30" style={{ fontSize: 'clamp(48px, 6vw, 72px)' }}>
-                "
+                &ldquo;
               </div>
               
               <blockquote 
@@ -116,7 +116,7 @@ export const CompanyStory = ({ story }: CompanyStoryProps) => {
               </blockquote>
               
               <div className="absolute bottom-8 right-8 text-blue-400 opacity-30" style={{ fontSize: 'clamp(48px, 6vw, 72px)' }}>
-                "
+                &rdquo;
               </div>
             </div>
           </motion.div>

@@ -3,9 +3,9 @@ import { BlogPost } from '@/components/sections/blog/BlogPost';
 import blogData from '@/data/blog.json';
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -14,8 +14,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = blogData.posts.find(p => p.slug === params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = blogData.posts.find(p => p.slug === slug);
   const author = post ? blogData.authors.find(a => a.id === post.author) : null;
   const relatedPosts = post
     ? blogData.posts

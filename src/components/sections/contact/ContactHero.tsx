@@ -18,7 +18,7 @@ const contactMethods = [
   { icon: MessageCircle, title: 'Chat Support', value: 'Available 24/7', action: '#' }
 ];
 
-export const ContactHero = ({ data }: ContactHeroProps) => {
+export const ContactHero = ({ data: _data }: ContactHeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
       background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
@@ -50,7 +50,7 @@ export const ContactHero = ({ data }: ContactHeroProps) => {
                 backdropFilter: 'blur(10px)',
               }}
             >
-              <span className="text-orange-400 font-medium">Let's Build Something Amazing</span>
+              <span className="text-orange-400 font-medium">Let&apos;s Build Something Amazing</span>
             </motion.div>
 
             <h1 className="font-bold mb-6" style={{
@@ -73,7 +73,7 @@ export const ContactHero = ({ data }: ContactHeroProps) => {
                 fontSize: 'clamp(1rem, 2vw, 1.5rem)'
               }}
             >
-              Get in touch with our team and let's discuss how we can bring your vision to life with cutting-edge technology.
+              Get in touch with our team and let&apos;s discuss how we can bring your vision to life with cutting-edge technology.
             </motion.p>
           </div>
 

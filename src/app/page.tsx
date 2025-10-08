@@ -13,7 +13,11 @@ export default async function HomePage() {
       <HomeHero data={data.hero} />
       <ServicesGrid services={data.services} />
       <FeaturedProjects projects={data.projects} />
-      <TestimonialsCarousel testimonials={data.testimonials} />
+      <TestimonialsCarousel testimonials={data.testimonials.map(t => ({
+        ...t,
+        avatar: t.avatar || { url: '', alt: '' },
+        rating: t.rating || 5
+      }))} />
       <CTABanner data={data.cta} />
     </main>
   );

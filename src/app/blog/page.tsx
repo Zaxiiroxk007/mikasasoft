@@ -28,6 +28,9 @@ export default function BlogPage() {
       <BlogGrid
         posts={blogData.posts.map(post => ({
           ...post,
+          image: post.thumbnail.url,
+          likes: 0,
+          readTime: `${post.readTime} min read`,
           author: {
             name: blogData.authors.find(author => author.id === post.author)?.name || 'Unknown Author',
             avatar: blogData.authors.find(author => author.id === post.author)?.avatar?.url || ''

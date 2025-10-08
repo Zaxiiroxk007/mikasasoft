@@ -23,7 +23,7 @@ function ProjectCard({ project }: { project: ProjectHighlight }) {
       >
         <div className="relative h-full rounded-2xl border border-zinc-700/50 overflow-hidden backdrop-blur-sm bg-zinc-900/50 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 group-hover:bg-zinc-800/50">
           {/* Image Container with Overlay */}
-          <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-blue-500/20 via-zinc-900 to-purple-500/20">
+          <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-blue-500/20 via-zinc-900 to-purple-500/20">
             {/* Multi-layer gradient background */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-zinc-800 to-purple-500/30" />
             <div className="absolute inset-0 bg-gradient-to-tl from-blue-400/10 via-transparent to-purple-400/10" />
@@ -35,8 +35,8 @@ function ProjectCard({ project }: { project: ProjectHighlight }) {
 
             {/* Project initials placeholder with premium styling */}
             <div className="absolute inset-0 flex items-center justify-center z-10">
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl bg-gradient-to-br from-blue-500/40 to-purple-500/40 backdrop-blur-md border-2 border-white/20 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
-                <span className="text-5xl md:text-6xl font-black text-white drop-shadow-2xl">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-gradient-to-br from-blue-500/40 to-purple-500/40 backdrop-blur-md border-2 border-white/20 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                <span className="text-3xl md:text-4xl font-black text-white drop-shadow-2xl">
                   {project.title.split(' ').map(w => w[0]).join('').slice(0, 2)}
                 </span>
               </div>
@@ -61,35 +61,35 @@ function ProjectCard({ project }: { project: ProjectHighlight }) {
           </div>
 
           {/* Content */}
-          <div className="p-6 md:p-8 lg:p-10">
+          <div className="p-4 md:p-6">
             {/* Client name */}
-            <p className="text-xs md:text-sm text-blue-400 font-bold uppercase tracking-wider mb-4">
+            <p className="text-xs text-blue-400 font-bold uppercase tracking-wider mb-3">
               {project.client}
             </p>
 
             {/* Title */}
-            <h3 className="text-xl md:text-2xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300 leading-snug">
+            <h3 className="text-lg md:text-xl font-bold mb-3 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300 leading-snug">
               {project.title}
             </h3>
 
             {/* Description */}
-            <p className="text-zinc-300 text-sm md:text-base mb-6 leading-relaxed line-clamp-2">
+            <p className="text-zinc-300 text-sm mb-4 leading-relaxed line-clamp-2">
               {project.description}
             </p>
 
             {/* Tech Stack Tags */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.tags.slice(0, 3).map((tag) => (
+            <div className="flex flex-wrap gap-1.5 mb-4">
+              {project.tags.slice(0, 2).map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1.5 text-xs rounded-lg bg-zinc-800/70 text-zinc-400 border border-zinc-700/50 font-medium hover:bg-blue-500/10 hover:border-blue-500/30 hover:text-blue-400 transition-colors"
+                  className="px-2 py-1 text-xs rounded-md bg-zinc-800/70 text-zinc-400 border border-zinc-700/50 font-medium hover:bg-blue-500/10 hover:border-blue-500/30 hover:text-blue-400 transition-colors"
                 >
                   {tag}
                 </span>
               ))}
-              {project.tags.length > 3 && (
-                <span className="px-3 py-1.5 text-xs rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/30 font-medium">
-                  +{project.tags.length - 3}
+              {project.tags.length > 2 && (
+                <span className="px-2 py-1 text-xs rounded-md bg-blue-500/10 text-blue-400 border border-blue-500/30 font-medium">
+                  +{project.tags.length - 2}
                 </span>
               )}
             </div>
@@ -97,7 +97,7 @@ function ProjectCard({ project }: { project: ProjectHighlight }) {
             {/* CTA */}
             <div className="flex items-center text-blue-400 text-sm font-bold group-hover:translate-x-2 transition-transform duration-300">
               <span>View Case Study</span>
-              <ArrowRight size={18} className="ml-2" />
+              <ArrowRight size={16} className="ml-2" />
             </div>
           </div>
 
@@ -144,8 +144,8 @@ export function FeaturedProjects({ projects }: FeaturedProjectsProps) {
           </p>
         </FadeIn>
 
-        <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
-          {projects.slice(0, 6).map((project) => (
+        <StaggerChildren className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-16">
+          {projects.slice(0, 4).map((project) => (
             <FadeIn key={project.id}>
               <ProjectCard project={project} />
             </FadeIn>

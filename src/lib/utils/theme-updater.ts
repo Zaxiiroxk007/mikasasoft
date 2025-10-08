@@ -3,7 +3,7 @@
  * Functions to quickly update color schemes across components
  */
 
-import { BRAND_COLORS, BACKGROUND_EFFECTS, TEXT_COLORS } from '@/lib/constants/theme';
+import { BRAND_COLORS } from '@/lib/constants/theme';
 
 // Replace all old color patterns with consistent ones
 export const STANDARDIZE_COLORS = {
@@ -62,3 +62,4 @@ export const STANDARD_TECH_BADGES = [
   { tech: 'TypeScript', left: 50, top: 85, color: 'from-blue-500/20 to-purple-500/20' },
   { tech: 'Terraform', left: 75, top: 45, color: 'from-blue-500/20 to-purple-500/20' }
 ];
+

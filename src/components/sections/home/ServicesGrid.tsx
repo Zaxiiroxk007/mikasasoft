@@ -14,7 +14,7 @@ interface ServicesGridProps {
   services: ServiceHighlight[];
 }
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   globe: Globe,
   smartphone: Smartphone,
   cloud: Cloud,
@@ -57,7 +57,7 @@ function ServiceCard({ service }: { service: ServiceHighlight }) {
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="relative group h-full"
     >
-      <div className="relative h-full p-6 md:p-8 lg:p-10 rounded-2xl bg-zinc-900/50 border border-zinc-700/50 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 backdrop-blur-sm group overflow-hidden">
+      <div className="relative h-full p-6 md:p-8 lg:p-10 rounded-2xl bg-zinc-900/50 border border-zinc-700/50 hover:border-blue-500/30 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 backdrop-blur-sm group overflow-hidden flex flex-col">
         {/* Glow effect on hover */}
         <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5" />
         
@@ -66,51 +66,56 @@ function ServiceCard({ service }: { service: ServiceHighlight }) {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
         </div>
 
-        <div className="relative translate-z-30">
-          {/* Icon with better spacing */}
-          <div className="w-16 h-16 md:w-20 md:h-20 lg:w-22 lg:h-22 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-blue-500/30 group-hover:bg-gradient-to-br group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-500">
-            <Icon className="w-8 h-8 md:w-10 md:h-10 lg:w-11 lg:h-11 text-blue-400 group-hover:text-blue-300 transition-all duration-300 group-hover:scale-110" />
+        <div className="relative translate-z-30 flex flex-col h-full">
+          {/* Header Content - Fixed height */}
+          <div className="flex-shrink-0">
+            {/* Icon with better spacing */}
+            <div className="w-16 h-16 md:w-20 md:h-20 lg:w-22 lg:h-22 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-blue-500/30 group-hover:bg-gradient-to-br group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-500">
+              <Icon className="w-8 h-8 md:w-10 md:h-10 lg:w-11 lg:h-11 text-blue-400 group-hover:text-blue-300 transition-all duration-300 group-hover:scale-110" />
+            </div>
+
+            {/* Title */}
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+              {service.title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-zinc-300 leading-relaxed mb-6 text-sm md:text-base">
+              {service.description}
+            </p>
           </div>
 
-          {/* Title */}
-          <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
-            {service.title}
-          </h3>
+          {/* Features - Flexible height */}
+          <div className="flex-1 flex flex-col justify-between">
+            <ul className="space-y-3 mb-8">
+              {service.features.map((feature, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  className="text-sm text-zinc-300 flex items-start gap-3"
+                >
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-500/30 flex items-center justify-center mt-0.5 border border-blue-500/20">
+                    <span className="text-blue-400 text-xs font-bold">✓</span>
+                  </span>
+                  <span>{feature}</span>
+                </motion.li>
+              ))}
+            </ul>
 
-          {/* Description */}
-          <p className="text-zinc-300 leading-relaxed mb-6 text-sm md:text-base">
-            {service.description}
-          </p>
-
-          {/* Features */}
-          <ul className="space-y-3 mb-8">
-            {service.features.map((feature, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 1, x: 0 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.05 }}
-                className="text-sm text-zinc-300 flex items-start gap-3"
-              >
-                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-500/30 flex items-center justify-center mt-0.5 border border-blue-500/20">
-                  <span className="text-blue-400 text-xs font-bold">✓</span>
-                </span>
-                <span>{feature}</span>
-              </motion.li>
-            ))}
-          </ul>
-
-          {/* CTA Button */}
-          <Link
-            href="/services"
-            className="group/btn flex items-center justify-between w-full px-5 py-3 rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500 hover:to-purple-600 hover:border-blue-400 text-blue-400 hover:text-white transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:shadow-blue-500/25 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2"
-          >
-            <span className="font-semibold text-sm">Learn More</span>
-            <ArrowRight
-              size={18}
-              className="group-hover/btn:translate-x-2 transition-all duration-300 group-hover/btn:scale-110"
-            />
-          </Link>
+            {/* CTA Button - Fixed at bottom */}
+            <Link
+              href="/services"
+              className="group/btn flex items-center justify-between w-full px-5 py-3 rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-500/10 to-purple-500/10 hover:from-blue-500 hover:to-purple-600 hover:border-blue-400 text-blue-400 hover:text-white transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:shadow-blue-500/25 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2 mt-auto"
+            >
+              <span className="font-semibold text-sm">Learn More</span>
+              <ArrowRight
+                size={18}
+                className="group-hover/btn:translate-x-2 transition-all duration-300 group-hover/btn:scale-110"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </motion.div>

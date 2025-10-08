@@ -78,7 +78,7 @@ export function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps
             </span>
           </Heading>
           <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed">
-            Don't just take our word for it. Here's what our partners have to say about working with us.
+            Don&apos;t just take our word for it. Here&apos;s what our partners have to say about working with us.
           </p>
         </FadeIn>
 
@@ -112,26 +112,26 @@ export function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps
                 }}
                 className="absolute w-full"
               >
-                <div className="relative p-10 md:p-14 lg:p-16 rounded-2xl border border-zinc-700/50 shadow-2xl shadow-blue-500/10 backdrop-blur-xl bg-zinc-900/50">
+                <div className="relative p-8 md:p-10 lg:p-12 rounded-2xl border border-zinc-700/50 shadow-2xl shadow-blue-500/10 backdrop-blur-xl bg-zinc-900/50">
                   {/* Decorative Quote Mark - Top Left */}
-                  <div className="absolute top-6 left-6 opacity-10">
-                    <Quote className="w-16 h-16 md:w-20 md:h-20 text-blue-400 rotate-180" />
+                  <div className="absolute top-4 left-4 opacity-10">
+                    <Quote className="w-12 h-12 md:w-16 md:h-16 text-blue-400 rotate-180" />
                   </div>
 
                   {/* Decorative Quote Mark - Bottom Right */}
-                  <div className="absolute bottom-6 right-6 opacity-10">
-                    <Quote className="w-16 h-16 md:w-20 md:h-20 text-purple-400" />
+                  <div className="absolute bottom-4 right-4 opacity-10">
+                    <Quote className="w-12 h-12 md:w-16 md:h-16 text-purple-400" />
                   </div>
 
                   {/* Testimonial Text */}
-                  <div className="relative z-10 mb-8">
-                    <p className="text-xl md:text-2xl lg:text-3xl text-zinc-200 text-center leading-relaxed font-light italic">
+                  <div className="relative z-10 mb-6">
+                    <p className="text-lg md:text-xl lg:text-2xl text-zinc-200 text-center leading-relaxed font-light italic max-w-4xl mx-auto">
                       &ldquo;{currentTestimonial.text}&rdquo;
                     </p>
                   </div>
 
                   {/* Stars */}
-                  <div className="flex justify-center gap-2 mb-8">
+                  <div className="flex justify-center gap-2 mb-6">
                     {Array.from({ length: currentTestimonial.rating }).map((_, i) => (
                       <motion.div
                         key={i}
@@ -139,7 +139,7 @@ export function TestimonialsCarousel({ testimonials }: TestimonialsCarouselProps
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{ delay: i * 0.1, type: "spring", stiffness: 200 }}
                       >
-                        <Star className="w-5 h-5 md:w-6 md:h-6 fill-blue-400 text-blue-400 drop-shadow-lg" />
+                        <Star className="w-4 h-4 md:w-5 md:h-5 fill-blue-400 text-blue-400 drop-shadow-lg" />
                       </motion.div>
                     ))}
                   </div>

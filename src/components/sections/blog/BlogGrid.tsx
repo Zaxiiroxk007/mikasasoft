@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import { Calendar, Clock, ArrowRight, User, Eye, Heart } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Eye, Heart } from 'lucide-react';
 
 interface BlogPost {
   id: string;

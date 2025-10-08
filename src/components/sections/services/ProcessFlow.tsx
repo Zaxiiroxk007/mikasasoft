@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Search, Brainstorm, Code2, TestTube, Rocket, MessageCircle } from 'lucide-react';
+import { Search, Code2, TestTube, Rocket, MessageCircle } from 'lucide-react';
 
 interface ProcessFlowProps {
   data: {

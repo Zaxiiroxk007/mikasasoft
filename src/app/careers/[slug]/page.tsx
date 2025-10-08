@@ -3,9 +3,9 @@ import { JobDetail } from '@/components/sections/careers/JobDetail';
 import careersData from '@/data/careers.json';
 
 interface JobPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -14,8 +14,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function JobPage({ params }: JobPageProps) {
-  const job = careersData.jobs.find(j => j.slug === params.slug);
+export default async function JobPage({ params }: JobPageProps) {
+  const { slug } = await params;
+  const job = careersData.jobs.find(j => j.slug === slug);
 
   if (!job) {
     notFound();

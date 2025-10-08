@@ -6,6 +6,7 @@ import { TeamSection } from '@/components/sections/about/TeamSection';
 import aboutData from '@/data/about.json';
 import teamData from '@/data/team.json';
 import type { Metadata } from 'next';
+import type { MissionVisionValue } from '@/types/about.types';
 
 export const metadata: Metadata = {
   title: 'About Us | Mikasasoft',
@@ -17,7 +18,7 @@ export default function AboutPage() {
     <main className="min-h-screen">
       <AboutHero data={aboutData.hero} />
       <CompanyStory story={aboutData.story} />
-      <MissionVisionValues items={aboutData.missionVisionValues} />
+      <MissionVisionValues items={aboutData.missionVisionValues as MissionVisionValue[]} />
       <CompanyTimeline data={{
         title: "Company Timeline",
         subtitle: "Our Journey Through Innovation",

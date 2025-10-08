@@ -1,43 +1,26 @@
 import type { Metadata } from "next";
-import {
-  Playfair_Display,
-  Montserrat,
-  Inter,
-  Space_Grotesk
-} from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { Navbar } from "@/components/common/Navigation";
 import { Footer } from "@/components/common/Footer";
 import { ScrollProgress } from "@/components/common/Interactive/ScrollProgress";
-import { SmoothScroll } from "@/components/common/Interactive/SmoothScroll";
+import { SafariOptimizedScroll } from "@/components/common/Interactive/SafariOptimizedScroll";
 import "./globals.css";
 
-// Premium Fonts Configuration
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
-
+// Optimized Fonts - Reduced weights for faster loading
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   display: "swap",
+  preload: true,
 });
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -95,14 +78,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="w-full">
       <body
-        className={`${playfair.variable} ${montserrat.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased w-full`}
+        className={`${inter.variable} ${spaceGrotesk.variable} antialiased w-full`}
       >
-        <SmoothScroll>
+        <SafariOptimizedScroll>
           <ScrollProgress />
           <Navbar />
           {children}
           <Footer />
-        </SmoothScroll>
+        </SafariOptimizedScroll>
       </body>
     </html>
   );

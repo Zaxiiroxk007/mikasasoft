@@ -4,12 +4,13 @@ import { motion } from 'framer-motion';
 import { Calendar, Award, Users, TrendingUp } from 'lucide-react';
 
 interface TimelineEvent {
+  id?: string;
   year: string;
   title: string;
   description: string;
-  icon: string;
-  achievements: string[];
-  impact: {
+  icon?: string;
+  achievements?: string[];
+  impact?: {
     metric: string;
     value: string;
   };

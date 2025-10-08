@@ -3,9 +3,9 @@ import { ProjectDetail } from '@/components/sections/portfolio/ProjectDetail';
 import projectsData from '@/data/projects.json';
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -14,8 +14,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projectsData.projects.find(p => p.slug === params.slug);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = projectsData.projects.find(p => p.slug === slug);
 
   if (!project) {
     notFound();

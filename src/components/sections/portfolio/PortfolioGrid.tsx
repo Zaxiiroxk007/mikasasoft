@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ExternalLink, Github, Star, Calendar, ArrowRight } from 'lucide-react';
 
 interface Project {
@@ -28,7 +27,6 @@ const categories = ['All', 'Web Development', 'Mobile Apps', 'E-commerce', 'SaaS
 
 export const PortfolioGrid = ({ projects }: PortfolioGridProps) => {
   const [activeFilter, setActiveFilter] = useState('All');
-  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
   const filteredProjects = projects.filter(project => 
     activeFilter === 'All' || project.category === activeFilter
@@ -141,8 +139,6 @@ export const PortfolioGrid = ({ projects }: PortfolioGridProps) => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ scale: 1.03, y: -10 }}
-                  onHoverStart={() => setHoveredProject(project.id)}
-                  onHoverEnd={() => setHoveredProject(null)}
                   className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/40 backdrop-blur-xl hover:border-white/20 transition-all duration-500"
                   style={{
                     backdropFilter: 'blur(20px)'

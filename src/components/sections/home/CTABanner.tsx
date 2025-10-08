@@ -101,7 +101,7 @@ export function CTABanner({ data }: CTABannerProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="text-lg md:text-xl lg:text-2xl text-zinc-300 mb-12 max-w-3xl mx-auto leading-relaxed text-center font-light"
+                className="text-lg md:text-xl text-zinc-300 mb-8 max-w-2xl mx-auto leading-relaxed text-center font-light"
               >
                 {data.description}
               </motion.p>
@@ -112,7 +112,7 @@ export function CTABanner({ data }: CTABannerProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-col sm:flex-row gap-5 justify-center items-stretch sm:items-center"
+                className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center"
               >
                 {data.cta.map((button, index) => (
                   <Button

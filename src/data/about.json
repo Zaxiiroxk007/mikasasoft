@@ -58,36 +58,42 @@
   ],
   "missionVisionValues": [
     {
+      "id": "1",
       "type": "mission",
       "title": "Our Mission",
       "description": "To empower businesses with transformative technology solutions that drive real results. We exist to turn ambitious visions into digital reality.",
       "icon": "target"
     },
     {
+      "id": "2",
       "type": "vision",
       "title": "Our Vision",
       "description": "To be the most trusted technology partner for visionary companies worldwide. We envision a future where great software is accessible to every ambitious business.",
       "icon": "eye"
     },
     {
+      "id": "3",
       "type": "value",
       "title": "Excellence",
       "description": "We obsess over quality in everything we build. From code architecture to user experience, excellence is our standard.",
       "icon": "star"
     },
     {
+      "id": "4",
       "type": "value",
       "title": "Innovation",
       "description": "We stay ahead of the curve, continuously learning and adopting cutting-edge technologies to give our clients a competitive edge.",
       "icon": "lightbulb"
     },
     {
+      "id": "5",
       "type": "value",
       "title": "Partnership",
       "description": "Your success is our success. We don't just deliver projects—we build long-term relationships based on trust and mutual growth.",
       "icon": "handshake"
     },
     {
+      "id": "6",
       "type": "value",
       "title": "Transparency",
       "description": "Open communication, honest timelines, and clear pricing. We believe great partnerships are built on trust.",

@@ -14,10 +14,11 @@ export interface TimelineItem {
 }
 
 export interface MissionVisionValue {
+  id: string;
   type: "mission" | "vision" | "value";
   title: string;
   description: string;
-  icon: string;
+  icon?: string;
 }
 
 export interface TeamMember {

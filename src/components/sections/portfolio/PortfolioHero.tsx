@@ -38,7 +38,7 @@ const featuredProjects = [
   }
 ];
 
-export const PortfolioHero = ({ data }: PortfolioHeroProps) => {
+export const PortfolioHero = ({ data: _data }: PortfolioHeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
       background: 'linear-gradient(135deg, #111827 0%, #1f2937 50%, #2d3748 100%)'

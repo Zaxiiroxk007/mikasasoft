@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Code, Palette, Smartphone, Shield, Zap, Globe } from 'lucide-react';
-import { BRAND_COLORS, BACKGROUND_EFFECTS } from '@/lib/constants/theme';
+import { BRAND_COLORS } from '@/lib/constants/theme';
 
 interface ServicesHeroProps {
   data: {
@@ -21,7 +21,7 @@ const services = [
   { icon: Zap, title: 'Performance', color: BRAND_COLORS.ai },
 ];
 
-export const ServicesHero = ({ data }: ServicesHeroProps) => {
+export const ServicesHero = ({ data: _data }: ServicesHeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
       background: 'linear-gradient(135deg, #111827 0%, #1f2937 50%, #2d3748 100%)'
@@ -71,7 +71,7 @@ export const ServicesHero = ({ data }: ServicesHeroProps) => {
               fontSize: 'clamp(3rem, 6vw, 5rem)',
               lineHeight: '1.1'
             }}>
-              <span className="text-white">Building Tomorrow's</span>
+              <span className="text-white">Building Tomorrow&apos;s</span>
               <br />
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-400 bg-clip-text text-transparent">
                 Digital Solutions
