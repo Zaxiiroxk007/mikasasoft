@@ -2,7 +2,7 @@ import { getHomepageData } from "@/lib/data/fetchers";
 import { HomeHero } from "@/components/sections/home/HomeHero";
 import { ServicesGrid } from "@/components/sections/home/ServicesGrid";
 import { FeaturedProjects } from "@/components/sections/home/FeaturedProjects";
-import { TestimonialsCarousel } from "@/components/sections/home/TestimonialsCarousel";
+
 import { CTABanner } from "@/components/sections/home/CTABanner";
 
 export default async function HomePage() {
@@ -13,11 +13,7 @@ export default async function HomePage() {
       <HomeHero data={data.hero} />
       <ServicesGrid services={data.services} />
       <FeaturedProjects projects={data.projects} />
-      <TestimonialsCarousel testimonials={data.testimonials.map(t => ({
-        ...t,
-        avatar: t.avatar || { url: '', alt: '' },
-        rating: t.rating || 5
-      }))} />
+
       <CTABanner data={data.cta} />
     </main>
   );

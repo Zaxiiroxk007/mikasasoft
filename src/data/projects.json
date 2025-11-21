@@ -1,140 +1,899 @@
 {
   "hero": {
-    "title": "Our Work Speaks for Itself",
-    "subtitle": "Portfolio of Excellence",
-    "description": "Explore our collection of successful projects that have transformed businesses and delighted users."
+    "title": "Engineering Excellence",
+    "subtitle": "Our Portfolio",
+    "description": "A showcase of scalable, high-performance solutions across Healthcare, FinTech, and Enterprise Operations."
   },
   "projects": [
     {
       "id": "proj-1",
-      "slug": "fintech-platform",
-      "title": "FinTech Trading Platform",
-      "client": "GlobalTrade Inc.",
-      "category": "Web Development",
-      "tags": ["React", "Node.js", "PostgreSQL", "WebSocket", "AWS"],
-      "thumbnail": {"url": "/assets/images/projects/fintech-thumb.jpg", "alt": "FinTech platform"},
-      "images": [
-        {"url": "/assets/images/projects/fintech-1.jpg", "alt": "Dashboard view"},
-        {"url": "/assets/images/projects/fintech-2.jpg", "alt": "Trading interface"},
-        {"url": "/assets/images/projects/fintech-3.jpg", "alt": "Analytics"}
+      "slug": "almoosa-health",
+      "title": "Almoosa Health Group Platform",
+      "client": "Almoosa Health Group",
+      "category": "Healthcare",
+      "tags": [
+        "Vue.js",
+        "NestJS",
+        "MySQL",
+        "Oracle",
+        "TypeORM",
+        "Firebase",
+        "Zoom SDK",
+        "Android Native"
       ],
-      "shortDescription": "Enterprise-grade trading platform processing $2B+ in daily transactions.",
-      "challenge": "GlobalTrade needed a high-performance trading platform capable of handling millions of concurrent users with real-time data updates and zero downtime.",
-      "solution": "We built a microservices architecture using React for the frontend, Node.js for the backend, and WebSocket for real-time communication. Deployed on AWS with auto-scaling and load balancing.",
-      "results": [
-        {"metric": "Daily Volume", "value": "$2B+"},
-        {"metric": "Active Users", "value": "500K+"},
-        {"metric": "Uptime", "value": "99.99%"},
-        {"metric": "Latency", "value": "<50ms"}
-      ],
-      "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "AWS", "WebSocket"],
-      "testimonial": {
-        "id": "1",
-        "text": "Mikasasoft delivered beyond our expectations. The platform handles our peak loads flawlessly.",
-        "author": "John Davidson",
-        "role": "CTO",
-        "company": "GlobalTrade Inc.",
-        "rating": 5
+      "thumbnail": {
+        "url": "/assets/images/projects/almoosa-thumb.jpg",
+        "alt": "Almoosa Health App"
       },
-      "featured": true,
-      "date": "2024-03",
-      "industry": "FinTech",
-      "duration": "8 months",
-      "teamSize": 12,
-      "url": "https://globaltrade.example.com"
-    },
-    {
-      "id": "proj-2",
-      "slug": "health-app",
-      "title": "AI-Powered Health App",
-      "client": "MediCare Solutions",
-      "category": "Mobile Development",
-      "tags": ["React Native", "TensorFlow", "Firebase", "AI/ML"],
-      "thumbnail": {"url": "/assets/images/projects/health-app-thumb.jpg", "alt": "Health app"},
       "images": [
-        {"url": "/assets/images/projects/health-1.jpg", "alt": "App home screen"},
-        {"url": "/assets/images/projects/health-2.jpg", "alt": "AI diagnostics"},
-        {"url": "/assets/images/projects/health-3.jpg", "alt": "Patient dashboard"}
+        {
+          "url": "/assets/images/projects/almoosa-1.jpg",
+          "alt": "Patient Portal"
+        },
+        {
+          "url": "/assets/images/projects/almoosa-2.jpg",
+          "alt": "Doctor Dashboard"
+        }
       ],
-      "shortDescription": "Revolutionary healthcare app with AI diagnostics serving 500K+ patients.",
-      "challenge": "MediCare wanted to make quality healthcare accessible through a mobile app featuring AI-powered preliminary diagnostics and seamless provider connectivity.",
-      "solution": "Built a cross-platform mobile app with React Native, integrated TensorFlow for AI diagnostics, and Firebase for real-time data sync. HIPAA-compliant architecture.",
+      "shortDescription": "Comprehensive healthcare platform with appointment scheduling, patient management, and telehealth consultations.",
+      "challenge": "Almoosa Health Group faced significant bottlenecks in patient throughput and data synchronization between their legacy HIS and patient-facing interfaces. They needed a unified digital ecosystem to manage appointments, inpatient records, and lab results securely.",
+      "solution": "We engineered a microservices-based architecture using NestJS to orchestrate data flow between the Oracle-based HIS and the Vue.js frontend. We integrated real-time notifications, VoIP calls using Zoom SDK, and AI-driven analytics to enhance user experience and operational efficiency.",
+      "architecture": "Hybrid Microservices",
+      "keyFeatures": [
+        "Doctor, Patient & Admin Portals",
+        "Real-time Notifications & VoIP Calls",
+        "AI-Driven Analytics",
+        "Telehealth Consultations (Zoom SDK)",
+        "HIS Integration (Oracle/MySQL)"
+      ],
+      "technicalDeepDive": "The core challenge was synchronizing legacy Oracle databases with a modern, event-driven frontend. We implemented a Change Data Capture (CDC) pattern using Debezium to stream database changes to Kafka, which then consumed by our NestJS microservices to update the application state in real-time.",
       "results": [
-        {"metric": "Downloads", "value": "500K+"},
-        {"metric": "Consultations", "value": "100K/month"},
-        {"metric": "User Rating", "value": "4.8/5"},
-        {"metric": "Diagnosis Accuracy", "value": "94%"}
+        {
+          "metric": "Admin Overhead",
+          "value": "-40%"
+        },
+        {
+          "metric": "User Base",
+          "value": "150k+"
+        },
+        {
+          "metric": "Latency",
+          "value": "<200ms"
+        }
       ],
-      "technologies": ["React Native", "TensorFlow", "Firebase", "Node.js", "MongoDB"],
+      "technologies": [
+        "Vue.js",
+        "NestJS",
+        "MySQL",
+        "Oracle",
+        "TypeORM",
+        "Firebase",
+        "Zoom SDK",
+        "Android Native"
+      ],
       "featured": true,
       "date": "2024-01",
       "industry": "Healthcare",
-      "duration": "10 months",
+      "duration": "Ongoing",
+      "teamSize": 10,
+      "url": "https://play.google.com/store/apps/details?id=com.almoosa.app&hl=en_US"
+    },
+    {
+      "id": "proj-new-1",
+      "slug": "imc-healthcare",
+      "title": "International Medical Center (IMC)",
+      "client": "International Medical Center",
+      "category": "Healthcare",
+      "tags": [
+        "Angular",
+        "Java Spring Boot",
+        "Material UI",
+        "MySQL",
+        "Oracle",
+        "Apache Tomcat"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/imc-thumb.jpg",
+        "alt": "IMC Healthcare Ecosystem"
+      },
+      "images": [],
+      "shortDescription": "Healthcare ecosystem featuring Women’s Health App, Physician App, and Patient Portal.",
+      "challenge": "Creating a cohesive digital ecosystem for a major medical center that integrates various specialized applications for different user groups (patients, physicians, women's health) while ensuring seamless data flow and payment processing.",
+      "solution": "We developed a suite of interconnected applications including a Women’s Health App, Physician App, and Patient Portal. The ecosystem features telemedicine capabilities, health tracking, and AI-powered diagnostics. We also integrated Telr for secure payment processing and implemented virtual tours.",
+      "architecture": "Integrated Healthcare Ecosystem",
+      "keyFeatures": [
+        "Women’s Health App & Physician App",
+        "Telemedicine & Health Tracking",
+        "AI-Powered Diagnostics",
+        "Payment Gateway Integration (Telr)",
+        "Virtual Tours & Appointment Scheduling"
+      ],
+      "technicalDeepDive": "The system required robust integration with existing hospital infrastructure. We utilized Java Spring Boot for the backend services, deployed on Apache Tomcat, to handle the complex business logic and secure data processing required for medical records and payments.",
+      "results": [
+        {
+          "metric": "Online Bookings",
+          "value": "+50%"
+        },
+        {
+          "metric": "Care Coord.",
+          "value": "Improved"
+        },
+        {
+          "metric": "Patient Exp.",
+          "value": "Enhanced"
+        }
+      ],
+      "technologies": [
+        "Angular",
+        "Java Spring Boot",
+        "Material UI",
+        "MySQL",
+        "Oracle",
+        "Apache Tomcat",
+        "Telr"
+      ],
+      "featured": true,
+      "date": "2023-10",
+      "industry": "Healthcare",
+      "duration": "1 year",
       "teamSize": 8
     },
     {
       "id": "proj-3",
-      "slug": "ecommerce-platform",
-      "title": "Luxury E-Commerce Platform",
-      "client": "Prestige Brands",
-      "category": "Web Development",
-      "tags": ["Next.js", "Three.js", "Stripe", "Shopify", "AR"],
-      "thumbnail": {"url": "/assets/images/projects/ecommerce-thumb.jpg", "alt": "E-commerce platform"},
+      "slug": "solaramps-operations",
+      "title": "SolarAMPs Operations",
+      "client": "SolarAMPs",
+      "category": "Mobile Apps",
+      "tags": [
+        "Flutter",
+        "Firebase",
+        "REST APIs",
+        "Google Maps SDK",
+        "Push Notifications"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/solaramps-thumb.jpg",
+        "alt": "SolarAMPs App"
+      },
       "images": [
-        {"url": "/assets/images/projects/ecommerce-1.jpg", "alt": "Homepage"},
-        {"url": "/assets/images/projects/ecommerce-2.jpg", "alt": "Product 3D view"},
-        {"url": "/assets/images/projects/ecommerce-3.jpg", "alt": "Checkout"}
+        {
+          "url": "/assets/images/projects/solaramps-1.jpg",
+          "alt": "Operations Dashboard"
+        }
       ],
-      "shortDescription": "Premium e-commerce with 3D visualization and AR try-on features.",
-      "challenge": "Prestige Brands needed a luxury shopping experience that showcased high-end products with immersive 3D and augmented reality features.",
-      "solution": "Developed with Next.js for performance, Three.js for 3D product visualization, and AR capabilities. Integrated with Shopify for inventory management.",
+      "shortDescription": "An all-in-one app for SolarAMPS team members enabling seamless project collaboration, time tracking, and productivity management.",
+      "challenge": "Field teams operated in remote areas with intermittent connectivity, leading to data synchronization issues and scheduling conflicts. SolarAMPs needed a 'local-first' mobile application that could maintain full functionality offline and sync seamlessly when connectivity was restored.",
+      "solution": "We built a robust Flutter application using a local SQLite database for offline persistence. We implemented a custom conflict resolution strategy using CRDTs (Conflict-free Replicated Data Types) to merge changes from multiple field agents without data loss when syncing with the Firebase backend.",
+      "architecture": "Offline-First Mobile",
+      "keyFeatures": [
+        "Seamless Project Collaboration & Time Tracking",
+        "Log Check-ins/Check-outs",
+        "Schedule Management",
+        "Offline-First Architecture with Background Sync",
+        "Real-time Geolocation Tracking & Geofencing"
+      ],
+      "technicalDeepDive": "The critical component was the synchronization engine. We utilized background fetch tasks to opportunistically sync data packets. To optimize bandwidth in low-connectivity zones, we implemented delta compression for image uploads, reducing data usage by 60%. The map interface uses vector tiles cached locally to ensure smooth navigation even without a network connection.",
       "results": [
-        {"metric": "Conversion Rate", "value": "+150%"},
-        {"metric": "Cart Value", "value": "+85%"},
-        {"metric": "Page Speed", "value": "95/100"},
-        {"metric": "Revenue Growth", "value": "+200%"}
+        {
+          "metric": "Field Efficiency",
+          "value": "+35%"
+        },
+        {
+          "metric": "Data Accuracy",
+          "value": "99.8%"
+        },
+        {
+          "metric": "Sync Conflict",
+          "value": "0%"
+        }
       ],
-      "technologies": ["Next.js", "Three.js", "Shopify", "Stripe", "WebAR"],
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "REST APIs",
+        "Google Maps SDK",
+        "Push Notifications",
+        "SQLite"
+      ],
       "featured": true,
-      "date": "2023-11",
-      "industry": "E-Commerce",
+      "date": "2023-12",
+      "industry": "Energy / Operations",
       "duration": "6 months",
-      "teamSize": 10
+      "teamSize": 4,
+      "url": "https://play.google.com/store/apps/details?id=com.solaramps.operations&hl=en_US"
     },
     {
       "id": "proj-4",
-      "slug": "saas-analytics",
-      "title": "SaaS Analytics Dashboard",
-      "client": "DataViz Pro",
-      "category": "Web Development",
-      "tags": ["React", "D3.js", "GraphQL", "MongoDB"],
-      "thumbnail": {"url": "/assets/images/projects/analytics-thumb.jpg", "alt": "Analytics dashboard"},
+      "slug": "book-better",
+      "title": "Book Better Marketplace",
+      "client": "Zapdas",
+      "category": "Mobile Apps",
+      "tags": [
+        "Flutter",
+        "Firebase",
+        "REST APIs",
+        "Google Maps SDK",
+        "Stripe"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/bookbetter-thumb.jpg",
+        "alt": "Book Better App"
+      },
       "images": [
-        {"url": "/assets/images/projects/analytics-1.jpg", "alt": "Main dashboard"},
-        {"url": "/assets/images/projects/analytics-2.jpg", "alt": "Data visualization"},
-        {"url": "/assets/images/projects/analytics-3.jpg", "alt": "Reports"}
+        {
+          "url": "/assets/images/projects/bookbetter-1.jpg",
+          "alt": "Booking Interface"
+        }
       ],
-      "shortDescription": "Real-time analytics platform processing millions of data points.",
-      "challenge": "DataViz Pro needed a powerful analytics platform capable of processing and visualizing massive datasets in real-time with interactive charts.",
-      "solution": "Built with React and D3.js for dynamic visualizations, GraphQL for efficient data queries, and MongoDB for flexible data storage. Optimized for performance.",
+      "shortDescription": "A modern salon marketplace app that connects users with beauty and wellness professionals.",
+      "challenge": "Creating a dual-sided marketplace (User & Merchant) required complex state management to keep availability slots synchronized in real-time to prevent double bookings, while also handling split payments and commission logic securely.",
+      "solution": "We developed two distinct Flutter apps sharing a common core library for business logic. The backend utilizes Firestore transactions to ensure atomicity of booking slots. We integrated Stripe Connect to handle complex split payments, automatically routing funds to merchants and commissions to the platform.",
+      "architecture": "Serverless Microservices",
+      "keyFeatures": [
+        "Book Appointments (Weddings, Hair, Makeup, etc.)",
+        "Smooth Discovery to Booking Flow",
+        "Real-time Availability Engine with Locking",
+        "Stripe Connect Split Payments",
+        "Geospatial Search & Filtering"
+      ],
+      "technicalDeepDive": "To prevent the 'double-booking' problem during high-traffic periods, we implemented optimistic UI updates combined with server-side transactional locking. When a user selects a slot, a temporary hold is placed in Redis. If the booking isn't confirmed within 5 minutes, the hold expires. This ensures high concurrency without data inconsistency.",
       "results": [
-        {"metric": "Data Points/sec", "value": "1M+"},
-        {"metric": "Users", "value": "50K+"},
-        {"metric": "Query Speed", "value": "<200ms"},
-        {"metric": "Customer Satisfaction", "value": "98%"}
+        {
+          "metric": "Platform",
+          "value": "iOS & Android"
+        },
+        {
+          "metric": "Transactions",
+          "value": "10k+/mo"
+        },
+        {
+          "metric": "Booking Errors",
+          "value": "<0.1%"
+        }
       ],
-      "technologies": ["React", "D3.js", "GraphQL", "MongoDB", "Node.js"],
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "REST APIs",
+        "Google Maps SDK",
+        "Payment Gateway (Stripe)",
+        "Algolia",
+        "Cloud Functions"
+      ],
+      "featured": false,
+      "date": "2023-08",
+      "industry": "Lifestyle / Marketplace",
+      "duration": "8 months",
+      "teamSize": 5,
+      "url": "https://play.google.com/store/apps/details?id=com.bookbetter.zapdas&hl=en_US"
+    },
+    {
+      "id": "proj-5",
+      "slug": "ovasave",
+      "title": "Ovasave Fertility Platform",
+      "client": "Ovasave",
+      "category": "Healthcare",
+      "tags": [
+        "NestJS",
+        "MySQL",
+        "Azure",
+        "HIPAA",
+        "Sprinto",
+        "Stripe"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/ovasave-thumb.jpg",
+        "alt": "Ovasave Platform"
+      },
+      "images": [],
+      "shortDescription": "HIPAA-compliant fertility preservation platform migrated from WordPress to NestJS/Next.js.",
+      "challenge": "Migrating a sensitive healthcare platform from a legacy WordPress monolith to a secure, scalable architecture while ensuring strict HIPAA compliance and zero downtime during the data migration.",
+      "solution": "We re-platformed to a secure NestJS/Next.js architecture hosted on Azure Healthcare Cloud. We implemented a multi-portal system, installment-based payments, and courier tracking integration. The migration was executed using a strangler fig pattern to gradually replace legacy functionality.",
+      "architecture": "Secure Cloud Native",
+      "keyFeatures": [
+        "Multi-Portal System (Patient/Admin/Lab)",
+        "Installment-Based Payments (Stripe)",
+        "Courier Tracking Integration",
+        "HIPAA-Compliant Data Storage",
+        "End-to-End Encryption"
+      ],
+      "technicalDeepDive": "Security was paramount. We implemented field-level encryption for sensitive patient data using Azure Key Vault. All API requests are validated against a strict policy engine. We also set up a CI/CD pipeline with automated security scanning (SAST/DAST) to prevent vulnerabilities from reaching production.",
+      "results": [
+        {
+          "metric": "Compliance",
+          "value": "100% HIPAA"
+        },
+        {
+          "metric": "Engagement",
+          "value": "Enhanced"
+        },
+        {
+          "metric": "Lab Integration",
+          "value": "Seamless"
+        }
+      ],
+      "technologies": [
+        "NestJS",
+        "Next.js",
+        "PostgreSQL",
+        "Azure",
+        "Stripe",
+        "Sprinto",
+        "Docker"
+      ],
+      "featured": false,
+      "date": "2023-05",
+      "industry": "Healthcare",
+      "duration": "1 year",
+      "teamSize": 6
+    },
+    {
+      "id": "proj-new-2",
+      "slug": "business-in-a-box",
+      "title": "Business in a Box - HR System",
+      "client": "Business in a Box",
+      "category": "Enterprise Systems",
+      "tags": [
+        "Vue.js",
+        "Vuetify",
+        "NestJS",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/hr-system-thumb.jpg",
+        "alt": "HR System Dashboard"
+      },
+      "images": [],
+      "shortDescription": "Comprehensive HR system for attendance tracking, grievance management, and workflow automation.",
+      "challenge": "The client faced inefficiencies in HR operations due to manual data entry and lack of automated tracking for attendance and grievances, leading to errors and administrative bottlenecks.",
+      "solution": "We developed a robust HR management system using Vue.js and NestJS. The system automates key HR workflows, tracks attendance in real-time, and provides a structured process for grievance management.",
+      "architecture": "Modular Monolith",
+      "keyFeatures": [
+        "Attendance Tracking System",
+        "Grievance Management Module",
+        "HR Workflow Automation",
+        "Employee Self-Service Portal",
+        "Real-time Reporting"
+      ],
+      "technicalDeepDive": "The system was containerized using Docker for consistent deployment across environments. We utilized PostgreSQL for reliable relational data storage and implemented complex SQL queries to generate attendance reports and analytics.",
+      "results": [
+        {
+          "metric": "Efficiency",
+          "value": "Increased"
+        },
+        {
+          "metric": "Errors",
+          "value": "Reduced"
+        },
+        {
+          "metric": "Ops Cost",
+          "value": "Lowered"
+        }
+      ],
+      "technologies": [
+        "Vue.js",
+        "Vuetify",
+        "NestJS",
+        "PostgreSQL",
+        "Docker"
+      ],
       "featured": false,
       "date": "2023-09",
-      "industry": "SaaS",
+      "industry": "Enterprise / HR",
+      "duration": "9 months",
+      "teamSize": 5
+    },
+    {
+      "id": "proj-7",
+      "slug": "priseen",
+      "title": "Priseen Fashion Tech",
+      "client": "Priseen",
+      "category": "Mobile Apps",
+      "tags": [
+        "Flutter",
+        "Firebase",
+        "REST APIs",
+        "NFC SDK",
+        "Secure Cloud Functions"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/priseen-thumb.jpg",
+        "alt": "Priseen App"
+      },
+      "images": [],
+      "shortDescription": "A next-gen fashion-tech app merging style and smart connectivity.",
+      "challenge": "Creating a seamless bridge between physical fashion items and digital social profiles using NFC technology, ensuring compatibility across a wide range of Android and iOS devices.",
+      "solution": "We developed a Flutter app integrating a custom native bridge for NFC interactions. We utilized Firebase Dynamic Links to handle deep linking from NFC scans, instantly redirecting users to specific social profiles or product pages.",
+      "architecture": "IoT-Enabled Mobile",
+      "keyFeatures": [
+        "Instantly share social & contact info via NFC",
+        "Manage purchases & track loyalty programs",
+        "Access exclusive offers",
+        "Cross-Platform NFC Read/Write Capability",
+        "Secure Tag Authentication"
+      ],
+      "technicalDeepDive": "The main technical hurdle was the variability in NFC hardware across devices. We built a hardware abstraction layer (HAL) within the Flutter app to normalize NFC read/write operations. We also implemented a cryptographic signature on the NFC tags to prevent cloning and ensure the authenticity of the fashion items.",
+      "results": [
+        {
+          "metric": "Scan Success",
+          "value": "99.5%"
+        },
+        {
+          "metric": "User Engagement",
+          "value": "High"
+        },
+        {
+          "metric": "Time to Interact",
+          "value": "<1s"
+        }
+      ],
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "REST APIs",
+        "NFC SDK",
+        "Secure Cloud Functions",
+        "Dart"
+      ],
+      "featured": false,
+      "date": "2023-11",
+      "industry": "Fashion / Tech",
       "duration": "5 months",
-      "teamSize": 6
+      "teamSize": 4,
+      "url": "https://play.google.com/store/apps/details?id=com.priseen.priseen&hl=en_US"
+    },
+    {
+      "id": "proj-8",
+      "slug": "aviso-ai",
+      "title": "Aviso AI Analytics",
+      "client": "Aviso AI",
+      "category": "Big Data",
+      "tags": [
+        "Vue.js",
+        "D3.js",
+        "Node.js",
+        "AWS",
+        "Express.js"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/aviso-thumb.jpg",
+        "alt": "Aviso Dashboard"
+      },
+      "images": [],
+      "shortDescription": "Interactive data analytics dashboard with real-time sales and pipeline reports.",
+      "challenge": "Visualizing millions of sales data points and pipeline projections in an intuitive, interactive format for C-suite decision makers, with sub-second rendering times.",
+      "solution": "Led a 3-member team in developing a high-performance Single Page Application (SPA) using Vue.js. We designed a dynamic report system and multi-dashboard management using Vue.js and D3.js to handle large datasets efficiently.",
+      "architecture": "Data-Intensive SPA",
+      "keyFeatures": [
+        "Custom D3.js/WebGL Visualizations",
+        "Real-time WebSocket Data Streaming",
+        "Dynamic Report System",
+        "Multi-Dashboard Management",
+        "Exportable High-Res Reports"
+      ],
+      "technicalDeepDive": "To optimize rendering performance, we implemented a virtualized windowing technique for the data tables and used canvas-based rendering for the scatter plots. Data aggregation was offloaded to a Node.js intermediate layer that cached pre-computed aggregates in Redis, reducing the load on the primary data warehouse.",
+      "results": [
+        {
+          "metric": "Render Time",
+          "value": "<200ms"
+        },
+        {
+          "metric": "Data Points",
+          "value": "1M+"
+        },
+        {
+          "metric": "User Satisfaction",
+          "value": "4.8/5"
+        }
+      ],
+      "technologies": [
+        "Vue.js",
+        "D3.js",
+        "Node.js",
+        "Express.js",
+        "AWS",
+        "Redis",
+        "WebGL"
+      ],
+      "featured": false,
+      "date": "2023-02",
+      "industry": "SaaS / Analytics",
+      "duration": "9 months",
+      "teamSize": 3
+    },
+    {
+      "id": "proj-9",
+      "slug": "seeloz",
+      "title": "Seeloz AI Admin Dashboard",
+      "client": "Seeloz",
+      "category": "Web Development",
+      "tags": [
+        "Vue.js",
+        "D3.js",
+        "WordPress",
+        "AI"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/seeloz-thumb.jpg",
+        "alt": "Seeloz Dashboard"
+      },
+      "images": [],
+      "shortDescription": "AI-powered admin dashboard with customizable data visualization reports.",
+      "challenge": "Creating a user-friendly interface for complex AI-driven supply chain data that needed to be embedded within an existing WordPress ecosystem while maintaining modern interactivity.",
+      "solution": "We developed a Vue.js application that mounts as a micro-frontend within the WordPress context. This allowed us to leverage modern state management and routing while keeping the content management capabilities of WordPress.",
+      "architecture": "Micro-Frontend",
+      "keyFeatures": [
+        "AI-Driven Supply Chain Forecasting",
+        "Customizable Widget Dashboard",
+        "RTL (Right-to-Left) Support",
+        "Seamless WordPress Integration",
+        "Role-Based Data Visibility"
+      ],
+      "technicalDeepDive": "The integration required a custom communication bridge between the PHP-based WordPress backend and the Vue.js frontend. We used the WordPress REST API to hydrate the Vue application with initial state and implemented a JWT-based authentication flow to secure the API endpoints.",
+      "results": [
+        {
+          "metric": "Efficiency",
+          "value": "+50%"
+        },
+        {
+          "metric": "Decisions",
+          "value": "Data-Driven"
+        },
+        {
+          "metric": "Load Time",
+          "value": "Fast"
+        }
+      ],
+      "technologies": [
+        "Vue.js",
+        "D3.js",
+        "Node.js",
+        "WordPress",
+        "PHP",
+        "MySQL"
+      ],
+      "featured": false,
+      "date": "2022-11",
+      "industry": "Supply Chain / AI",
+      "duration": "6 months",
+      "teamSize": 4
+    },
+    {
+      "id": "proj-10",
+      "slug": "global-direct",
+      "title": "Global Direct UI/UX",
+      "client": "Global Direct LLC",
+      "category": "Web Development",
+      "tags": [
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "PHP"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/global-direct-thumb.jpg",
+        "alt": "Global Direct Sites"
+      },
+      "images": [],
+      "shortDescription": "Mobile-first layouts and security optimizations for major telecom brands like RedPocket.com.",
+      "challenge": "Ensuring top-tier security and responsiveness for high-traffic telecom websites like RedPocket.com, FreedomPop.com, and UnrealMobile.com, which face frequent bot attacks and require 100% uptime.",
+      "solution": "We designed and implemented mobile-first layouts using Bootstrap. We conducted security audits and performance optimizations, ensuring top-tier website security and responsiveness. We also hardened the PHP backend against common vulnerabilities.",
+      "architecture": "High-Availability Web",
+      "keyFeatures": [
+        "Mobile-First Responsive Design",
+        "RedPocket.com & FreedomPop.com",
+        "Security Hardening & Audit",
+        "Performance Optimization",
+        "SEO Enhancement"
+      ],
+      "technicalDeepDive": "We focused on optimizing Core Web Vitals. By implementing critical CSS inlining, lazy loading for images, and deferring non-essential JavaScript, we improved the LCP (Largest Contentful Paint) by 60%. We also configured a Web Application Firewall (WAF) to filter out malicious bot traffic.",
+      "results": [
+        {
+          "metric": "LCP Score",
+          "value": "<1.2s"
+        },
+        {
+          "metric": "Security",
+          "value": "Hardened"
+        },
+        {
+          "metric": "Engagement",
+          "value": "Enhanced"
+        }
+      ],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "PHP",
+        "Bootstrap",
+        "Cloudflare",
+        "jQuery"
+      ],
+      "featured": false,
+      "date": "2021-05",
+      "industry": "Telecom",
+      "duration": "1 year",
+      "teamSize": 3
+    },
+    {
+      "id": "proj-11",
+      "slug": "book-better-merchant",
+      "title": "Book Better Merchants",
+      "client": "Zapdas",
+      "category": "Mobile Apps",
+      "tags": [
+        "Flutter",
+        "Firebase",
+        "REST APIs",
+        "Cloud Messaging",
+        "Analytics"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/bookbetter-merchant-thumb.jpg",
+        "alt": "Merchant App"
+      },
+      "images": [],
+      "shortDescription": "A dedicated app for salon owners to manage their digital presence on the Book Better marketplace.",
+      "challenge": "Empowering merchants with a simple yet powerful tool to manage their business on the Book Better marketplace, including staff scheduling, revenue tracking, and customer relationship management.",
+      "solution": "Built a dedicated Flutter app for merchants with a dashboard-centric UI. We integrated complex calendar management logic to handle staff shifts and shop hours. The app features offline support for viewing schedules.",
+      "architecture": "Business Management SaaS",
+      "keyFeatures": [
+        "Register Salon & Showcase Services",
+        "Manage Appointments & Staff",
+        "Highlight Top Stylists",
+        "Interactive Calendar & Scheduling",
+        "Revenue Analytics & Reporting"
+      ],
+      "technicalDeepDive": "The scheduling logic was the most complex aspect. We implemented a custom algorithm to calculate available slots based on shop hours, staff shifts, service duration, and existing bookings. This calculation is performed on the edge using Cloud Functions to ensure low latency and consistency across the platform.",
+      "results": [
+        {
+          "metric": "Admin Time",
+          "value": "-50%"
+        },
+        {
+          "metric": "Adoption",
+          "value": "High"
+        },
+        {
+          "metric": "Rating",
+          "value": "4.9/5"
+        }
+      ],
+      "technologies": [
+        "Flutter",
+        "Firebase",
+        "REST APIs",
+        "Cloud Messaging",
+        "Analytics",
+        "Cloud Functions"
+      ],
+      "featured": false,
+      "date": "2023-08",
+      "industry": "Lifestyle / SaaS",
+      "duration": "8 months",
+      "teamSize": 5,
+      "url": "https://play.google.com/store/apps/details?id=com.bookbettermerchant.ioo&hl=en_US"
+    },
+    {
+      "id": "proj-new-3",
+      "slug": "bouncer-privacy",
+      "title": "Bouncer - AI Privacy Guardian",
+      "client": "Open Source / Community",
+      "category": "Web Development",
+      "tags": [
+        "Chrome MV3",
+        "Node.js",
+        "Express.js",
+        "Gemini AI",
+        "JavaScript"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/bouncer-thumb.jpg",
+        "alt": "Bouncer Extension"
+      },
+      "images": [],
+      "shortDescription": "Chrome MV3 privacy extension that analyzes policies and network behavior to reveal data collection.",
+      "challenge": "Users are often unaware of the hidden data collection practices, third-party trackers, and complex privacy policies of the websites they visit, leading to privacy violations and digital fingerprinting.",
+      "solution": "We built a browser add-on that analyzes privacy policies and live network behavior to reveal data types collected and generate a per-site Trust Score. It features an in-page overlay UI and auto-rejects non-essential cookies where supported.",
+      "architecture": "Browser Extension (MV3)",
+      "keyFeatures": [
+        "Real-time Privacy Policy Analysis",
+        "Tracker & Fingerprinting Detection",
+        "Per-Site Trust Score Calculation",
+        "Auto-Reject Non-Essential Cookies",
+        "Gemini AI-Powered Summaries"
+      ],
+      "technicalDeepDive": "The extension uses a local Node/Express backend integrated with Gemini to process and summarize privacy policies. We implemented CSP-safe background fetching and SPA-safe gating to ensure compatibility across modern web apps. A custom caching layer with single-flight deduping ensures efficient API usage.",
+      "results": [
+        {
+          "metric": "Trackers Blocked",
+          "value": "1M+"
+        },
+        {
+          "metric": "User Trust",
+          "value": "Increased"
+        },
+        {
+          "metric": "Performance",
+          "value": "Lightweight"
+        }
+      ],
+      "technologies": [
+        "Chrome Extension MV3",
+        "Node.js",
+        "Express.js",
+        "Gemini API",
+        "JavaScript",
+        "HTML/CSS"
+      ],
+      "featured": true,
+      "date": "2024-02",
+      "industry": "Cybersecurity / Tools",
+      "duration": "4 months",
+      "teamSize": 2
+    },
+    {
+      "id": "proj-new-4",
+      "slug": "nexus-data-platform",
+      "title": "Nexus Enterprise Data Platform",
+      "client": "Nexus Data Systems",
+      "category": "Big Data",
+      "tags": [
+        "Kafka",
+        "Flink",
+        "Elasticsearch",
+        "Spring Boot",
+        "Vue.js"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/nexus-thumb.jpg",
+        "alt": "Nexus Data Platform"
+      },
+      "images": [],
+      "shortDescription": "Enterprise-grade data onboarding and streaming analytics platform handling 25GB+ datasets.",
+      "challenge": "The client needed to process massive datasets (up to 25GB) with high throughput (250K+ rows/batch) while ensuring data integrity, real-time observability, and efficient search capabilities for their analytics team.",
+      "solution": "We architected a Kafka/Flink pipeline with Schema Registry and DLQ/retry logic. We built a high-performance batch processing engine using streaming parsers and integrated a columnar analytics database alongside a relational store for hybrid workloads.",
+      "architecture": "Streaming Data Pipeline",
+      "keyFeatures": [
+        "High-Performance Data Onboarding (25GB+)",
+        "Real-time Streaming Analytics (Kafka/Flink)",
+        "Elasticsearch Optimization (Custom Analyzers)",
+        "Dynamic Reporting & Pivot Tables",
+        "Role-Based Access Control (Keycloak)"
+      ],
+      "technicalDeepDive": "We optimized Elasticsearch by implementing index lifecycle management with custom n-gram analyzers, reducing query time by 30%. For reporting, we used SXSSF streaming to cut export runtime by 35%. The entire platform is monitored via JMX dashboards tracking lag and partition health.",
+      "results": [
+        {
+          "metric": "Throughput",
+          "value": "250K/batch"
+        },
+        {
+          "metric": "Query Time",
+          "value": "-30%"
+        },
+        {
+          "metric": "Export Speed",
+          "value": "+35%"
+        }
+      ],
+      "technologies": [
+        "Apache Kafka",
+        "Apache Flink",
+        "Elasticsearch",
+        "Spring Boot",
+        "Vue.js",
+        "Keycloak",
+        "Docker"
+      ],
+      "featured": true,
+      "date": "2023-06",
+      "industry": "Big Data / Enterprise",
+      "duration": "1.5 years",
+      "teamSize": 12
+    },
+    {
+      "id": "proj-new-5",
+      "slug": "fincore-banking",
+      "title": "FinCore Banking Engine",
+      "client": "FinCore Solutions",
+      "category": "FinTech",
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "Oracle",
+        "JWT"
+      ],
+      "thumbnail": {
+        "url": "/assets/images/projects/fincore-thumb.jpg",
+        "alt": "FinCore Banking"
+      },
+      "images": [],
+      "shortDescription": "Modern core banking implementation with secure payment workflows and dispute management.",
+      "challenge": "Modernizing legacy JAX-RS services to a Spring Boot microservices architecture while maintaining ISO 8583 compliance for financial transaction messaging and ensuring strict security standards for payment processing.",
+      "solution": "We decomposed the monolith into domain-driven microservices, adding comprehensive support for Prepaid, Debit, and Credit accounts. We implemented a secure Investigation Case Dispute Management system and integrated ChatGPT API for developer support.",
+      "architecture": "Secure Microservices",
+      "keyFeatures": [
+        "Core Banking (Prepaid, Debit, Credit)",
+        "ISO 8583 Compliance",
+        "Dispute Management System",
+        "Secure Payment Workflows",
+        "ChatGPT API Integration for Docs"
+      ],
+      "technicalDeepDive": "Security was the top priority. We implemented JWT authentication, encryption protocols, and certificate management. We also modernized the legacy services to Spring Boot with auto-configuration, improving startup time by 40% and enhancing operational stability.",
+      "results": [
+        {
+          "metric": "Startup Time",
+          "value": "-40%"
+        },
+        {
+          "metric": "Compliance",
+          "value": "ISO 8583"
+        },
+        {
+          "metric": "Security",
+          "value": "Bank-Grade"
+        }
+      ],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Oracle",
+        "JWT",
+        "Resilience4j",
+        "OpenAPI",
+        "ChatGPT API"
+      ],
+      "featured": true,
+      "date": "2024-03",
+      "industry": "FinTech",
+      "duration": "1 year",
+      "teamSize": 10
     }
   ],
   "categories": [
-    {"id": "1", "name": "Web Development", "slug": "web-development", "description": "Modern web applications", "icon": "globe"},
-    {"id": "2", "name": "Mobile Development", "slug": "mobile-development", "description": "iOS & Android apps", "icon": "smartphone"},
-    {"id": "3", "name": "Cloud Solutions", "slug": "cloud-solutions", "description": "Scalable cloud infrastructure", "icon": "cloud"},
-    {"id": "4", "name": "AI & ML", "slug": "ai-ml", "description": "Intelligent solutions", "icon": "cpu"}
+    {
+      "id": "1",
+      "name": "Healthcare",
+      "slug": "healthcare",
+      "description": "HIPAA-compliant healthtech",
+      "icon": "activity"
+    },
+    {
+      "id": "2",
+      "name": "FinTech",
+      "slug": "fintech",
+      "description": "Secure financial systems",
+      "icon": "dollar-sign"
+    },
+    {
+      "id": "3",
+      "name": "Mobile Apps",
+      "slug": "mobile",
+      "description": "Flutter & Native",
+      "icon": "smartphone"
+    },
+    {
+      "id": "4",
+      "name": "Big Data",
+      "slug": "big-data",
+      "description": "Analytics & Pipelines",
+      "icon": "database"
+    },
+    {
+      "id": "5",
+      "name": "Enterprise Systems",
+      "slug": "enterprise-systems",
+      "description": "Scalable Business Solutions",
+      "icon": "briefcase"
+    },
+    {
+      "id": "6",
+      "name": "Web Development",
+      "slug": "web-development",
+      "description": "Modern Web Apps",
+      "icon": "globe"
+    }
   ]
 }

@@ -157,3 +157,20 @@ export const shuffle = <T>(array: T[]): T[] => {
   }
   return shuffled;
 };
+/**
+ * Gets a background image path based on project category
+ * @param category - Project category
+ */
+export const getCategoryImage = (category: string): string => {
+  const images: Record<string, string> = {
+    "Healthcare": "/assets/images/categories/healthcare.png",
+    "FinTech": "/assets/images/categories/fintech.png",
+    "Mobile Apps": "/assets/images/categories/mobile.png",
+    "Big Data": "/assets/images/categories/bigdata.png",
+    "Enterprise Systems": "/assets/images/categories/enterprise.png",
+    "Web Development": "/assets/images/categories/webdev.png",
+  };
+
+  return images[category] || "/assets/images/categories/webdev.png";
+};
+

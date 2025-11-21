@@ -1,7 +1,7 @@
 import { ContactHero } from '@/components/sections/contact/ContactHero';
 import { ContactForm } from '@/components/sections/contact/ContactForm';
 import { ContactInfo } from '@/components/sections/contact/ContactInfo';
-import { FAQSection } from '@/components/sections/contact/FAQSection';
+
 import contactData from '@/data/contact.json';
 
 export default function ContactPage() {
@@ -27,25 +27,11 @@ export default function ContactPage() {
               action: "Send Email"
             },
             {
-              icon: "phone", 
-              title: "Call Us",
-              value: contactData.contactInfo.phone || "+1 (555) 123-4567",
-              description: "Speak directly with our team during business hours",
-              action: "Call Now"
-            },
-            {
               icon: "location",
-              title: "Visit Our Office",
-              value: `${contactData.contactInfo.address.street}, ${contactData.contactInfo.address.city}`,
-              description: "Schedule a meeting at our headquarters",
-              action: "Visit"
-            },
-            {
-              icon: "clock",
-              title: "Office Hours",
-              value: "Monday - Friday: 9:00 AM - 6:00 PM",
-              description: "Our team is available during standard business hours",
-              action: "Schedule Meeting"
+              title: "Location",
+              value: "Remote First / Global",
+              description: "Serving clients worldwide",
+              action: "View Map"
             },
             {
               icon: "website",
@@ -53,28 +39,11 @@ export default function ContactPage() {
               value: "@mikasasoft",
               description: "Stay updated with our latest projects and insights",
               action: "Follow"
-            },
-            {
-              icon: "general",
-              title: "General Inquiry",
-              value: "General questions",
-              description: "Have a general question? We're here to help",
-              action: "Ask Question"
             }
           ]
         }} />
       </div>
-      <FAQSection data={{
-        title: "Frequently Asked Questions",
-        subtitle: "Got Questions?",
-        description: "Find answers to common questions about our services, process, and how we work with clients.",
-        faqs: contactData.faqs.map(faq => ({
-          question: faq.question,
-          answer: faq.answer,
-          category: faq.category
-        })),
-        categories: Array.from(new Set(contactData.faqs.map(faq => faq.category)))
-      }} />
+
     </main>
   );
 }

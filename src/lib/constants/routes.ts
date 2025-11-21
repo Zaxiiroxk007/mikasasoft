@@ -26,7 +26,5 @@ export const NAVIGATION_LINKS = [
   { label: "About", href: ROUTES.ABOUT },
   { label: "Services", href: ROUTES.SERVICES },
   { label: "Portfolio", href: ROUTES.PORTFOLIO },
-  { label: "Blog", href: ROUTES.BLOG },
-  { label: "Careers", href: ROUTES.CAREERS },
   { label: "Contact", href: ROUTES.CONTACT },
 ] as const;

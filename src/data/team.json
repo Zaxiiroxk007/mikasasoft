@@ -2,140 +2,73 @@
   "members": [
     {
       "id": "1",
-      "name": "Alex Reeves",
-      "role": "CEO & Founder",
-      "department": "Leadership",
-      "bio": "Visionary leader with 15+ years in software development. Former VP of Engineering at a Fortune 500 company, Alex founded Mikasasoft to create impactful solutions that matter.",
+      "name": "Muhammad Jawad",
+      "role": "Principal Software Engineer",
+      "department": "Engineering",
+      "bio": "Results-driven Principal Software Engineer with 6+ years of experience designing scalable web and mobile applications. Specialized in Vue.js, NestJS, Node.js, and Spring Boot.",
       "image": {
-        "url": "/assets/images/team/alex-reeves.jpg",
-        "alt": "Alex Reeves"
+        "url": "/assets/images/team/jawad.jpg",
+        "alt": "Muhammad Jawad"
       },
       "social": {
-        "linkedin": "https://linkedin.com/in/alexreeves",
-        "twitter": "https://twitter.com/alexreeves",
-        "github": "https://github.com/alexreeves"
+        "linkedin": "https://linkedin.com/in/jawadd",
+        "github": "https://github.com/muhammadjawadofficial",
+        "email": "jawad4781@gmail.com"
       },
       "featured": true,
-      "skills": ["Strategic Planning", "Software Architecture", "Team Leadership"]
+      "skills": [
+        "Vue.js",
+        "NestJS",
+        "Spring Boot",
+        "AWS",
+        "Azure"
+      ]
     },
     {
       "id": "2",
-      "name": "Maria Santos",
-      "role": "CTO",
-      "department": "Leadership",
-      "bio": "Tech innovator specializing in scalable architectures and cloud infrastructure. Maria leads our technical vision and ensures we stay ahead of the curve.",
+      "name": "Furqan",
+      "role": "Senior Flutter Engineer",
+      "department": "Mobile",
+      "bio": "Expert Flutter developer specializing in high-performance mobile applications. Proven track record in building marketplace, operations, and healthcare apps with complex integrations.",
       "image": {
-        "url": "/assets/images/team/maria-santos.jpg",
-        "alt": "Maria Santos"
+        "url": "/assets/images/team/furqan.jpg",
+        "alt": "Furqan"
       },
       "social": {
-        "linkedin": "https://linkedin.com/in/mariasantos",
-        "twitter": "https://twitter.com/mariasantos",
-        "github": "https://github.com/mariasantos"
+        "linkedin": "#",
+        "github": "#"
       },
       "featured": true,
-      "skills": ["Cloud Architecture", "DevOps", "Microservices"]
+      "skills": [
+        "Flutter",
+        "Firebase",
+        "Google Maps SDK",
+        "REST APIs"
+      ]
     },
     {
       "id": "3",
-      "name": "James Liu",
-      "role": "Head of Design",
-      "department": "Design",
-      "bio": "Award-winning designer with a passion for creating intuitive, beautiful interfaces. James brings 10+ years of design expertise to every project.",
+      "name": "Muhammad Zain",
+      "role": "Software Engineer - Data & Backend",
+      "department": "Data Engineering",
+      "bio": "Specializing in scalable Java/Spring Boot applications and data-intensive analytics platforms. Expertise in microservices architecture, real-time streaming (Kafka, Flink), and Elasticsearch.",
       "image": {
-        "url": "/assets/images/team/james-liu.jpg",
-        "alt": "James Liu"
+        "url": "/assets/images/team/zain.jpg",
+        "alt": "Muhammad Zain"
       },
       "social": {
-        "linkedin": "https://linkedin.com/in/jamesliu",
-        "twitter": "https://twitter.com/jamesliu"
+        "linkedin": "https://linkedin.com/in/mhmd-zain/",
+        "github": "https://github.com/Zaxiiroxk007",
+        "email": "zain060420@gmail.com"
       },
       "featured": true,
-      "skills": ["UI/UX Design", "Design Systems", "User Research"]
-    },
-    {
-      "id": "4",
-      "name": "Sophia Anderson",
-      "role": "Senior Full-Stack Engineer",
-      "department": "Engineering",
-      "bio": "Full-stack expert specializing in React, Node.js, and cloud technologies. Sophia architects solutions that scale.",
-      "image": {
-        "url": "/assets/images/team/sophia-anderson.jpg",
-        "alt": "Sophia Anderson"
-      },
-      "social": {
-        "linkedin": "https://linkedin.com/in/sophiaanderson",
-        "github": "https://github.com/sophiaanderson"
-      },
-      "featured": false,
-      "skills": ["React", "Node.js", "AWS", "TypeScript"]
-    },
-    {
-      "id": "5",
-      "name": "Ryan O'Connor",
-      "role": "Mobile Lead",
-      "department": "Engineering",
-      "bio": "Mobile development specialist with expertise in iOS, Android, and cross-platform frameworks.",
-      "image": {
-        "url": "/assets/images/team/ryan-oconnor.jpg",
-        "alt": "Ryan O'Connor"
-      },
-      "social": {
-        "linkedin": "https://linkedin.com/in/ryanoconnor",
-        "github": "https://github.com/ryanoconnor"
-      },
-      "featured": false,
-      "skills": ["React Native", "Swift", "Kotlin", "Flutter"]
-    },
-    {
-      "id": "6",
-      "name": "Priya Patel",
-      "role": "DevOps Engineer",
-      "department": "Engineering",
-      "bio": "Infrastructure expert ensuring our deployments are smooth, secure, and scalable.",
-      "image": {
-        "url": "/assets/images/team/priya-patel.jpg",
-        "alt": "Priya Patel"
-      },
-      "social": {
-        "linkedin": "https://linkedin.com/in/priyapatel",
-        "github": "https://github.com/priyapatel"
-      },
-      "featured": false,
-      "skills": ["Kubernetes", "Docker", "CI/CD", "Terraform"]
-    },
-    {
-      "id": "7",
-      "name": "Marcus Johnson",
-      "role": "Product Manager",
-      "department": "Product",
-      "bio": "Product strategist bridging the gap between business goals and technical execution.",
-      "image": {
-        "url": "/assets/images/team/marcus-johnson.jpg",
-        "alt": "Marcus Johnson"
-      },
-      "social": {
-        "linkedin": "https://linkedin.com/in/marcusjohnson",
-        "twitter": "https://twitter.com/marcusjohnson"
-      },
-      "featured": false,
-      "skills": ["Product Strategy", "Agile", "Stakeholder Management"]
-    },
-    {
-      "id": "8",
-      "name": "Elena Volkov",
-      "role": "QA Lead",
-      "department": "Quality Assurance",
-      "bio": "Quality champion ensuring every release meets our exacting standards.",
-      "image": {
-        "url": "/assets/images/team/elena-volkov.jpg",
-        "alt": "Elena Volkov"
-      },
-      "social": {
-        "linkedin": "https://linkedin.com/in/elenavolkov"
-      },
-      "featured": false,
-      "skills": ["Test Automation", "Selenium", "Jest", "Quality Strategy"]
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Kafka",
+        "Flink",
+        "Elasticsearch"
+      ]
     }
   ]
 }

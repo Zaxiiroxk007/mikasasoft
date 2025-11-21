@@ -1,152 +1,140 @@
 {
   "hero": {
-    "title": "Services That Scale",
-    "subtitle": "End-to-End Digital Solutions",
-    "description": "From concept to deployment, we provide comprehensive technology services that power modern businesses."
+    "title": "Expert Engineering Services",
+    "subtitle": "Specialized Solutions",
+    "description": "We deliver high-performance software solutions tailored to Healthcare, FinTech, and Enterprise needs."
   },
   "services": [
     {
-      "id": "web-development",
-      "slug": "web-development",
-      "title": "Web Development",
-      "icon": "globe",
-      "shortDescription": "Modern, performant web applications built with cutting-edge frameworks.",
-      "fullDescription": "We build blazing-fast, scalable web applications using the latest technologies. Our expertise spans from simple marketing sites to complex enterprise platforms, all optimized for performance, SEO, and user experience.",
-      "features": [
-        "Next.js & React Development",
-        "Progressive Web Apps (PWA)",
-        "Jamstack Architecture",
-        "Headless CMS Integration",
-        "E-commerce Solutions",
-        "Performance Optimization"
-      ],
-      "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js"],
-      "caseStudies": ["proj-1", "proj-3", "proj-4"],
-      "benefits": [
-        "Lightning-fast page loads",
-        "SEO-optimized architecture",
-        "Scalable infrastructure",
-        "Mobile-first design"
-      ]
-    },
-    {
       "id": "mobile-development",
       "slug": "mobile-development",
-      "title": "Mobile Development",
+      "title": "Mobile App Development",
       "icon": "smartphone",
-      "shortDescription": "Native and cross-platform mobile apps that users love.",
-      "fullDescription": "Whether you need a native iOS/Android app or a cross-platform solution, we deliver exceptional mobile experiences that engage users and drive business results.",
+      "shortDescription": "High-performance Flutter and Native Android applications.",
+      "fullDescription": "We build seamless, high-performance mobile applications. Our expertise in Flutter allows us to deliver beautiful, cross-platform apps, while our native Android skills ensure deep system integration when needed.",
       "features": [
-        "iOS App Development",
-        "Android App Development",
-        "React Native Apps",
-        "Flutter Development",
-        "App Store Optimization",
-        "Push Notifications & Analytics"
+        "Cross-Platform Flutter Apps",
+        "Native Android (Kotlin/Java)",
+        "Google Maps & Location Services",
+        "Real-time Chat & Notifications",
+        "Payment Gateway Integration",
+        "Wearable & IoT Integration"
       ],
-      "technologies": ["React Native", "Swift", "Kotlin", "Flutter", "Firebase"],
-      "caseStudies": ["proj-2"],
+      "technologies": [
+        "Flutter",
+        "Dart",
+        "Kotlin",
+        "Java",
+        "Firebase",
+        "Google Maps"
+      ],
+      "caseStudies": [
+        "solaramps-operations",
+        "book-better"
+      ],
       "benefits": [
-        "Native performance",
-        "Offline-first architecture",
-        "Seamless UX across devices",
-        "App store compliance"
+        "Single codebase efficiency",
+        "Native-like performance",
+        "Rapid time-to-market",
+        "Scalable architecture"
       ]
     },
     {
-      "id": "cloud-solutions",
-      "slug": "cloud-solutions",
-      "title": "Cloud & DevOps",
-      "icon": "cloud",
-      "shortDescription": "Scalable cloud infrastructure and automated deployment pipelines.",
-      "fullDescription": "We architect and implement cloud solutions that grow with your business. From migration to optimization, our cloud expertise ensures reliability, security, and cost-efficiency.",
+      "id": "backend-engineering",
+      "slug": "backend-engineering",
+      "title": "Enterprise Backend & Cloud",
+      "icon": "server",
+      "shortDescription": "Scalable microservices with Spring Boot and NestJS.",
+      "fullDescription": "We architect robust backend systems capable of handling enterprise-scale loads. Using Spring Boot and NestJS, we build secure, scalable microservices deployed on AWS or Azure.",
       "features": [
-        "AWS & Azure Architecture",
-        "Kubernetes & Docker",
-        "CI/CD Pipeline Setup",
-        "Infrastructure as Code",
-        "Cloud Migration",
-        "Performance Monitoring"
+        "Microservices Architecture",
+        "API Development (REST/GraphQL)",
+        "Spring Boot & NestJS",
+        "Cloud Infrastructure (AWS/Azure)",
+        "Database Design (SQL/NoSQL)",
+        "Security & Compliance"
       ],
-      "technologies": ["AWS", "Azure", "Kubernetes", "Docker", "Terraform", "Jenkins"],
-      "caseStudies": ["proj-1", "proj-4"],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "NestJS",
+        "Node.js",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "caseStudies": [
+        "i2c-banking",
+        "ovasave"
+      ],
       "benefits": [
-        "99.9% uptime guarantee",
-        "Auto-scaling infrastructure",
-        "Cost optimization",
-        "Enterprise-grade security"
+        "High availability",
+        "Secure transactions",
+        "Horizontal scalability",
+        "Maintainable codebases"
       ]
     },
     {
-      "id": "ui-ux-design",
-      "slug": "ui-ux-design",
-      "title": "UI/UX Design",
-      "icon": "palette",
-      "shortDescription": "Beautiful, intuitive interfaces backed by user research.",
-      "fullDescription": "Great design is invisible. We create user experiences that feel natural, look stunning, and drive conversions through data-driven design decisions.",
+      "id": "data-engineering",
+      "slug": "data-engineering",
+      "title": "Data Engineering & Analytics",
+      "icon": "database",
+      "shortDescription": "Real-time streaming and big data analytics pipelines.",
+      "fullDescription": "Turn your data into actionable insights. We build high-throughput data pipelines using Kafka and Flink, and create powerful search and analytics solutions with Elasticsearch.",
       "features": [
-        "User Research & Testing",
-        "Wireframing & Prototyping",
-        "Design System Creation",
-        "Interaction Design",
-        "Usability Testing",
-        "Brand Identity"
+        "Real-time Data Streaming",
+        "ETL Pipelines",
+        "Apache Kafka & Flink",
+        "Elasticsearch Optimization",
+        "Data Visualization (D3.js)",
+        "Big Data Processing"
       ],
-      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle"],
-      "caseStudies": ["proj-2", "proj-3"],
+      "technologies": [
+        "Apache Kafka",
+        "Apache Flink",
+        "Elasticsearch",
+        "D3.js",
+        "Python"
+      ],
+      "caseStudies": [
+        "bright-media-lms"
+      ],
       "benefits": [
-        "User-centered design",
-        "Increased conversions",
-        "Brand consistency",
-        "Accessibility compliance"
+        "Real-time insights",
+        "Data-driven decisions",
+        "High throughput processing",
+        "Custom visualization"
       ]
     },
     {
-      "id": "ai-ml",
-      "slug": "ai-ml",
-      "title": "AI & Machine Learning",
-      "icon": "cpu",
-      "shortDescription": "Intelligent solutions powered by artificial intelligence.",
-      "fullDescription": "Harness the power of AI to automate processes, gain insights, and create innovative features that set you apart from competitors.",
+      "id": "healthcare-fintech",
+      "slug": "healthcare-fintech",
+      "title": "Healthcare & FinTech Solutions",
+      "icon": "shield",
+      "shortDescription": "Compliant, secure solutions for regulated industries.",
+      "fullDescription": "We specialize in building software for highly regulated industries. From HIPAA-compliant healthcare platforms to secure FinTech payment systems, we understand the compliance landscape.",
       "features": [
-        "Predictive Analytics",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Recommendation Systems",
-        "Chatbots & Virtual Assistants",
-        "Model Training & Deployment"
+        "HIPAA Compliance",
+        "Secure Payment Processing",
+        "Telemedicine Platforms",
+        "Banking Systems",
+        "Fraud Detection",
+        "Audit Trails"
       ],
-      "technologies": ["TensorFlow", "PyTorch", "scikit-learn", "OpenAI", "Hugging Face"],
-      "caseStudies": ["proj-2", "proj-4"],
-      "benefits": [
-        "Automated workflows",
-        "Data-driven insights",
-        "Personalized experiences",
-        "Competitive advantage"
-      ]
-    },
-    {
-      "id": "consulting",
-      "slug": "consulting",
-      "title": "Technical Consulting",
-      "icon": "briefcase",
-      "shortDescription": "Strategic technology guidance for complex challenges.",
-      "fullDescription": "Sometimes you need expert advice before diving into development. Our consultants provide strategic guidance on architecture, technology selection, and digital transformation.",
-      "features": [
-        "Technology Assessment",
-        "Architecture Planning",
-        "Code Audits",
-        "Performance Optimization",
-        "Security Reviews",
-        "Team Training"
+      "technologies": [
+        "Encryption",
+        "OAuth/JWT",
+        "Stripe/Payment Gateways",
+        "Audit Logs"
       ],
-      "technologies": ["Various", "Agnostic Approach"],
-      "caseStudies": ["proj-1"],
+      "caseStudies": [
+        "almoosa-health",
+        "ovasave"
+      ],
       "benefits": [
-        "Reduced technical debt",
-        "Informed decisions",
-        "Risk mitigation",
-        "Team upskilling"
+        "Regulatory compliance",
+        "Data security",
+        "Industry expertise",
+        "Risk mitigation"
       ]
     }
   ]

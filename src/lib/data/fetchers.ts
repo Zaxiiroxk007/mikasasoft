@@ -38,7 +38,29 @@ export async function getSiteConfig() {
  * Fetches homepage data
  */
 export async function getHomepageData(): Promise<HomepageData> {
-  return fetchData<HomepageData>("homepage.json");
+  const [homepageData, projectsData] = await Promise.all([
+    fetchData<Omit<HomepageData, "projects">>("homepage.json"),
+    fetchData<ProjectsData>("projects.json"),
+  ]);
+
+  // Filter featured projects and map to ProjectHighlight type
+  const featuredProjects = projectsData.projects
+    .filter((p) => p.featured)
+    .map((p) => ({
+      id: p.id,
+      title: p.title,
+      category: p.category,
+      description: p.shortDescription,
+      thumbnail: p.thumbnail,
+      slug: p.slug,
+      client: p.client,
+      tags: p.tags,
+    }));
+
+  return {
+    ...homepageData,
+    projects: featuredProjects,
+  };
 }
 
 /**

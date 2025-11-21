@@ -1,19 +1,19 @@
 {
   "companyName": "Mikasasoft",
   "tagline": "Building Defenses, Breaking Boundaries",
-  "description": "Premium software development company specializing in cutting-edge web, mobile, and cloud solutions. We transform visionary ideas into powerful digital experiences.",
+  "description": "Specialized software engineering agency delivering high-performance solutions for Healthcare, FinTech, and Enterprise sectors. We transform visionary ideas into powerful digital experiences.",
   "logo": "/assets/brand/logo.svg",
   "logoLight": "/assets/brand/logo-light.svg",
   "logoDark": "/assets/brand/logo-dark.svg",
   "favicon": "/favicon.ico",
   "email": "contact@mikasasoft.com",
-  "phone": "+1 (555) 123-4567",
+  "phone": "",
   "address": {
-    "street": "123 Innovation Boulevard",
-    "city": "San Francisco",
-    "state": "CA",
-    "zip": "94102",
-    "country": "United States"
+    "street": "Remote First",
+    "city": "Global",
+    "state": "",
+    "zip": "",
+    "country": ""
   },
   "social": {
     "twitter": "https://twitter.com/mikasasoft",
@@ -27,17 +27,17 @@
     "weekend": "Saturday - Sunday: Closed"
   },
   "seo": {
-    "defaultTitle": "Mikasasoft | Building Defenses, Breaking Boundaries",
+    "defaultTitle": "Mikasasoft | Elite Engineering for Healthcare & FinTech",
     "titleTemplate": "%s | Mikasasoft",
-    "defaultDescription": "Premium software development company specializing in web, mobile, and cloud solutions. We transform ideas into powerful digital experiences.",
+    "defaultDescription": "Specialized software engineering agency delivering high-performance solutions for Healthcare, FinTech, and Enterprise sectors.",
     "keywords": [
       "software development",
-      "web development",
-      "mobile app development",
-      "cloud solutions",
-      "UI/UX design",
-      "custom software",
-      "enterprise solutions",
+      "Flutter development",
+      "Spring Boot",
+      "Data Engineering",
+      "Healthcare software",
+      "FinTech solutions",
+      "enterprise backend",
       "digital transformation"
     ],
     "ogImage": "/og-image.jpg",
@@ -47,8 +47,8 @@
     "darkMode": true,
     "newsletter": true,
     "liveChat": false,
-    "blog": true,
-    "careers": true,
+    "blog": false,
+    "careers": false,
     "portfolio": true
   },
   "analytics": {

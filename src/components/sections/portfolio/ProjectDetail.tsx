@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
 import {
   ArrowLeft,
@@ -11,8 +9,14 @@ import {
   Building2,
   Clock,
   Star,
-  Quote
+  Quote,
+  Cpu,
+  Layers,
+  Code2,
+  CheckCircle2
 } from 'lucide-react';
+import { Container } from "@/components/common/Layout";
+import { Button } from "@/components/ui/button";
 
 interface ProjectDetailProps {
   project: {
@@ -27,6 +31,9 @@ interface ProjectDetailProps {
     shortDescription: string;
     challenge: string;
     solution: string;
+    architecture?: string;
+    keyFeatures?: string[];
+    technicalDeepDive?: string;
     results: Array<{ metric: string; value: string }>;
     technologies: string[];
     testimonial?: {
@@ -47,270 +54,236 @@ interface ProjectDetailProps {
 }
 
 export const ProjectDetail = ({ project }: ProjectDetailProps) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
-    <div className="relative bg-deep-midnight">
+    <div className="bg-zinc-950 min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-obsidian via-deep-midnight to-deep-midnight">
-        {/* Background */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `linear-gradient(rgba(45, 95, 76, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(45, 95, 76, 0.2) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-          }} />
-        </div>
+      <section className="relative pt-32 pb-20 border-b border-zinc-900 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
-        <div className="relative z-10 w-full px-6 lg:px-8 py-20 text-center">
-          {/* Back Button */}
-          <motion.div
-            className="mb-8"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+        <Container size="xl" className="relative z-10">
+          <div className="max-w-4xl mx-auto">
+            {/* Back Link */}
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-2 text-military-brass hover:text-survey-corps-emerald transition-colors"
+              className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-12 group"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="font-medium">Back to Portfolio</span>
             </Link>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Category & Featured Badge */}
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="px-4 py-2 rounded-full bg-survey-corps-emerald/10 text-military-brass text-sm font-medium border border-survey-corps-emerald/30">
-                {project.category}
-              </span>
-              {project.featured && (
-                <span className="px-4 py-2 rounded-full bg-gradient-to-r from-military-brass to-survey-corps-emerald text-white text-sm font-bold flex items-center gap-1">
-                  <Star className="w-3 h-3 fill-white" />
-                  Featured
-                </span>
-              )}
-            </div>
+            {/* Header Content */}
+            <div className="animate-fade-in">
+              <div className="flex flex-wrap items-center gap-4 mb-8">
+                <div className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+                  {project.category}
+                </div>
+                {project.featured && (
+                  <div className="px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-500 text-sm font-medium flex items-center gap-1">
+                    <Star className="w-3 h-3 fill-current" />
+                    Featured Case Study
+                  </div>
+                )}
+              </div>
 
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-survey-corps-emerald via-military-brass to-survey-corps-emerald bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 {project.title}
-              </span>
-            </h1>
+              </h1>
 
-            {/* Client */}
-            <p className="text-xl text-silver mb-8">{project.client}</p>
+              <p className="text-xl text-zinc-400 mb-10 leading-relaxed max-w-2xl">
+                {project.shortDescription}
+              </p>
 
-            {/* Meta Info */}
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-silver">
-              <div className="flex items-center gap-2">
-                <Building2 className="w-4 h-4 text-military-brass" />
-                <span>{project.industry}</span>
-              </div>
-              {project.duration && (
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-military-brass" />
-                  <span>{project.duration}</span>
+              {/* Meta Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 border-y border-zinc-800 py-8 mb-10">
+                <div>
+                  <div className="text-zinc-500 text-sm mb-1 flex items-center gap-2">
+                    <Building2 className="w-4 h-4" /> Client
+                  </div>
+                  <div className="text-white font-medium">{project.client}</div>
                 </div>
-              )}
-              {project.teamSize && (
-                <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-military-brass" />
-                  <span>{project.teamSize} team members</span>
+                <div>
+                  <div className="text-zinc-500 text-sm mb-1 flex items-center gap-2">
+                    <Clock className="w-4 h-4" /> Duration
+                  </div>
+                  <div className="text-white font-medium">{project.duration || 'N/A'}</div>
                 </div>
-              )}
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-military-brass" />
-                <span>{new Date(project.date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
+                <div>
+                  <div className="text-zinc-500 text-sm mb-1 flex items-center gap-2">
+                    <Users className="w-4 h-4" /> Team Size
+                  </div>
+                  <div className="text-white font-medium">{project.teamSize || 'N/A'} Members</div>
+                </div>
+                <div>
+                  <div className="text-zinc-500 text-sm mb-1 flex items-center gap-2">
+                    <Calendar className="w-4 h-4" /> Date
+                  </div>
+                  <div className="text-white font-medium">
+                    {new Date(project.date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                  </div>
+                </div>
               </div>
+
+              {/* Live Link */}
+              {project.url && (
+                <Button asChild size="lg" variant="primary">
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">
+                    Visit Live Project
+                    <ExternalLink className="ml-2 w-4 h-4" />
+                  </a>
+                </Button>
+              )}
             </div>
-
-            {/* Project Link */}
-            {project.url && (
-              <motion.div
-                className="mt-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-survey-corps-emerald to-military-brass text-white font-bold hover:scale-105 transition-transform duration-300"
-                >
-                  <span>Visit Live Site</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </motion.div>
-            )}
-          </motion.div>
-        </div>
+          </div>
+        </Container>
       </section>
 
-      {/* Content Sections */}
-      <div className="relative max-w-6xl mx-auto px-6 lg:px-8 py-24" ref={ref}>
-        {/* Challenge Section */}
-        <motion.section
-          className="mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold text-platinum mb-6 flex items-center gap-3">
-            <div className="w-2 h-8 bg-gradient-to-b from-survey-corps-emerald to-military-brass rounded-full" />
-            The Challenge
-          </h2>
-          <p className="text-lg text-silver leading-relaxed">
-            {project.challenge}
-          </p>
-        </motion.section>
+      {/* Main Content */}
+      <section className="py-24">
+        <Container size="xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            {/* Left Column - Content */}
+            <div className="lg:col-span-8 space-y-20">
 
-        {/* Solution Section */}
-        <motion.section
-          className="mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <h2 className="text-3xl font-bold text-platinum mb-6 flex items-center gap-3">
-            <div className="w-2 h-8 bg-gradient-to-b from-survey-corps-emerald to-military-brass rounded-full" />
-            Our Solution
-          </h2>
-          <p className="text-lg text-silver leading-relaxed">
-            {project.solution}
-          </p>
-        </motion.section>
-
-        {/* Results Section */}
-        <motion.section
-          className="mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <h2 className="text-3xl font-bold text-platinum mb-8 flex items-center gap-3">
-            <div className="w-2 h-8 bg-gradient-to-b from-survey-corps-emerald to-military-brass rounded-full" />
-            Results & Impact
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {project.results.map((result, index) => (
-              <motion.div
-                key={index}
-                className="p-6 rounded-xl bg-graphite/50 backdrop-blur-sm border border-white/5 hover:border-survey-corps-emerald/30 transition-all duration-300"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-              >
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-survey-corps-emerald to-military-brass bg-clip-text text-transparent mb-2">
-                  {result.value}
+              {/* Challenge & Solution */}
+              <div className="space-y-12">
+                <div className="animate-fade-in [animation-delay:200ms]">
+                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span className="w-1 h-8 bg-red-500 rounded-full" />
+                    The Challenge
+                  </h2>
+                  <p className="text-zinc-400 text-lg leading-relaxed">
+                    {project.challenge}
+                  </p>
                 </div>
-                <div className="text-silver text-sm">{result.metric}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
 
-        {/* Technologies Section */}
-        <motion.section
-          className="mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <h2 className="text-3xl font-bold text-platinum mb-8 flex items-center gap-3">
-            <div className="w-2 h-8 bg-gradient-to-b from-survey-corps-emerald to-military-brass rounded-full" />
-            Technologies Used
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {project.technologies.map((tech, index) => (
-              <motion.span
-                key={index}
-                className="px-4 py-2 rounded-lg bg-graphite/50 backdrop-blur-sm border border-white/5 text-platinum font-medium hover:border-survey-corps-emerald/30 hover:bg-survey-corps-emerald/10 transition-all duration-300"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3, delay: 0.6 + index * 0.05 }}
-              >
-                {tech}
-              </motion.span>
-            ))}
-          </div>
-        </motion.section>
+                <div className="animate-fade-in [animation-delay:300ms]">
+                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span className="w-1 h-8 bg-blue-500 rounded-full" />
+                    The Solution
+                  </h2>
+                  <p className="text-zinc-400 text-lg leading-relaxed">
+                    {project.solution}
+                  </p>
+                </div>
+              </div>
 
-        {/* Testimonial Section */}
-        {project.testimonial && (
-          <motion.section
-            className="mb-20"
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
-            <div className="relative p-8 md:p-12 rounded-2xl bg-gradient-to-br from-graphite/50 to-slate/50 backdrop-blur-sm border border-survey-corps-emerald/20 overflow-hidden">
-              {/* Quote Icon */}
-              <Quote className="absolute top-6 left-6 w-12 h-12 text-survey-corps-emerald/20" />
+              {/* Technical Deep Dive */}
+              {project.technicalDeepDive && (
+                <div className="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 animate-fade-in [animation-delay:400ms]">
+                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                    <Code2 className="w-6 h-6 text-purple-500" />
+                    Technical Deep Dive
+                  </h2>
+                  <p className="text-zinc-300 leading-relaxed">
+                    {project.technicalDeepDive}
+                  </p>
+                </div>
+              )}
 
-              <div className="relative z-10">
-                {/* Stars */}
-                <div className="flex gap-1 mb-6">
-                  {Array.from({ length: project.testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-military-brass fill-military-brass" />
+              {/* Key Features */}
+              {project.keyFeatures && (
+                <div className="animate-fade-in [animation-delay:500ms]">
+                  <h2 className="text-2xl font-bold text-white mb-8">Key Features</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {project.keyFeatures.map((feature, index) => (
+                      <div key={index} className="flex items-start gap-3 p-4 rounded-lg bg-zinc-900/50 border border-zinc-800/50">
+                        <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                        <span className="text-zinc-300 font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Results */}
+              <div className="animate-fade-in [animation-delay:600ms]">
+                <h2 className="text-2xl font-bold text-white mb-8">Impact & Results</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                  {project.results.map((result, index) => (
+                    <div key={index} className="p-6 rounded-xl bg-zinc-900 border border-zinc-800 text-center">
+                      <div className="text-3xl font-bold text-white mb-2">{result.value}</div>
+                      <div className="text-zinc-500 text-sm font-medium uppercase tracking-wider">{result.metric}</div>
+                    </div>
                   ))}
                 </div>
+              </div>
 
-                {/* Testimonial Text */}
-                <p className="text-xl text-platinum leading-relaxed mb-8 italic">
-                  &ldquo;{project.testimonial.text}&rdquo;
-                </p>
+            </div>
 
-                {/* Author */}
-                <div className="flex items-center gap-4 pt-6 border-t border-white/10">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-survey-corps-emerald/20 to-military-brass/20 flex items-center justify-center">
-                    <span className="text-military-brass font-bold">
-                      {project.testimonial.author.split(' ').map(n => n[0]).join('')}
-                    </span>
+            {/* Right Column - Sidebar */}
+            <div className="lg:col-span-4 space-y-10">
+
+              {/* Architecture */}
+              {project.architecture && (
+                <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800 animate-fade-in [animation-delay:400ms]">
+                  <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                    <Layers className="w-5 h-5 text-blue-500" />
+                    Architecture
+                  </h3>
+                  <div className="text-zinc-300 font-medium">
+                    {project.architecture}
                   </div>
-                  <div>
-                    <div className="text-platinum font-bold">{project.testimonial.author}</div>
-                    <div className="text-silver text-sm">
-                      {project.testimonial.role}, {project.testimonial.company}
+                </div>
+              )}
+
+              {/* Tech Stack */}
+              <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800 animate-fade-in [animation-delay:500ms]">
+                <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                  <Cpu className="w-5 h-5 text-blue-500" />
+                  Tech Stack
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-300 text-sm border border-zinc-700"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Testimonial */}
+              {project.testimonial && (
+                <div className="p-6 rounded-xl bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 animate-fade-in [animation-delay:600ms]">
+                  <Quote className="w-8 h-8 text-zinc-700 mb-4" />
+                  <p className="text-zinc-300 italic mb-6 leading-relaxed">
+                    &ldquo;{project.testimonial.text}&rdquo;
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-zinc-500">
+                      {project.testimonial.author[0]}
+                    </div>
+                    <div>
+                      <div className="text-white font-bold text-sm">{project.testimonial.author}</div>
+                      <div className="text-zinc-500 text-xs">{project.testimonial.role}</div>
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
-          </motion.section>
-        )}
+          </div>
+        </Container>
+      </section>
 
-        {/* CTA Section */}
-        <motion.section
-          className="text-center p-12 rounded-2xl bg-gradient-to-r from-survey-corps-emerald/10 to-military-brass/10 border border-survey-corps-emerald/20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <h2 className="text-3xl font-bold text-platinum mb-4">
-            Ready to Start Your Project?
+      {/* CTA */}
+      <section className="py-24 border-t border-zinc-900 bg-zinc-950">
+        <Container size="md" className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Build Your Own Success Story?
           </h2>
-          <p className="text-silver text-lg mb-8 max-w-2xl mx-auto">
-            Let&apos;s build something amazing together. Get in touch to discuss your project.
+          <p className="text-zinc-400 text-lg mb-10">
+            Let&apos;s discuss how we can apply these same engineering principles to your project.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-survey-corps-emerald to-military-brass text-white font-bold hover:scale-105 transition-transform duration-300 shadow-lg shadow-survey-corps-emerald/20"
-          >
-            <span>Get Started</span>
-            <ArrowLeft className="w-5 h-5 rotate-180" />
-          </Link>
-        </motion.section>
-      </div>
+          <Button asChild size="lg" variant="primary">
+            <Link href="/contact">
+              Start a Conversation
+            </Link>
+          </Button>
+        </Container>
+      </section>
     </div>
   );
 };

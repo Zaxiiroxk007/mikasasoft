@@ -1,8 +1,8 @@
 {
   "hero": {
     "title": "Building Defenses, Breaking Boundaries",
-    "subtitle": "Elite Software Development",
-    "description": "We forge cutting-edge digital solutions that stand the test of time. From enterprise platforms to innovative startups, we turn ambitious visions into reality.",
+    "subtitle": "Elite Engineering for Healthcare & FinTech",
+    "description": "We forge cutting-edge digital solutions that stand the test of time. From HIPAA-compliant healthcare platforms to high-frequency trading systems, we turn ambitious visions into reality.",
     "cta": [
       {
         "text": "Start Your Project",
@@ -17,63 +17,17 @@
     ],
     "backgroundVideo": "/assets/videos/hero-background.mp4"
   },
-  "about": {
-    "title": "Strategic Technology Partners",
-    "description": "For over a decade, Mikasasoft has been at the forefront of digital innovation. We combine deep technical expertise with strategic thinking to deliver solutions that drive real business outcomes. Our team of elite engineers and designers doesn't just build software—we architect the future.",
-    "image": {
-      "url": "/assets/images/about-preview.jpg",
-      "alt": "Mikasasoft team collaboration"
-    },
-    "values": [
-      {
-        "icon": "shield",
-        "title": "Reliability",
-        "description": "Rock-solid solutions built to withstand any challenge"
-      },
-      {
-        "icon": "zap",
-        "title": "Innovation",
-        "description": "Cutting-edge technology that pushes boundaries"
-      },
-      {
-        "icon": "users",
-        "title": "Partnership",
-        "description": "Your success is our mission, every step of the way"
-      }
-    ],
-    "cta": {
-      "text": "Learn More About Us",
-      "href": "/about",
-      "variant": "ghost"
-    }
-  },
   "services": [
-    {
-      "id": "web-dev",
-      "title": "Web Development",
-      "description": "Blazing-fast, scalable web applications built with modern frameworks and best practices.",
-      "icon": "globe",
-      "features": [
-        "Next.js & React",
-        "Progressive Web Apps",
-        "Headless CMS Integration",
-        "Performance Optimization"
-      ],
-      "image": {
-        "url": "/assets/images/services/web-dev.jpg",
-        "alt": "Web development illustration"
-      }
-    },
     {
       "id": "mobile-dev",
       "title": "Mobile Development",
-      "description": "Native and cross-platform mobile apps that deliver exceptional user experiences.",
+      "description": "High-performance Flutter and Native Android apps for complex operations and marketplaces.",
       "icon": "smartphone",
       "features": [
-        "iOS & Android",
-        "React Native",
-        "Flutter Development",
-        "App Store Optimization"
+        "Flutter & Native Android",
+        "Google Maps Integration",
+        "Real-time Operations",
+        "Secure Payments"
       ],
       "image": {
         "url": "/assets/images/services/mobile-dev.jpg",
@@ -81,166 +35,122 @@
       }
     },
     {
-      "id": "cloud-solutions",
-      "title": "Cloud Solutions",
-      "description": "Scalable cloud infrastructure and DevOps practices that grow with your business.",
-      "icon": "cloud",
+      "id": "backend-eng",
+      "title": "Enterprise Backend",
+      "description": "Scalable microservices architectures using Spring Boot and NestJS.",
+      "icon": "server",
       "features": [
-        "AWS & Azure",
-        "Kubernetes & Docker",
-        "CI/CD Pipelines",
-        "Infrastructure as Code"
+        "Spring Boot & NestJS",
+        "Microservices",
+        "Cloud Infrastructure",
+        "API Development"
       ],
       "image": {
         "url": "/assets/images/services/cloud.jpg",
-        "alt": "Cloud solutions illustration"
+        "alt": "Backend engineering illustration"
       }
     },
     {
-      "id": "ui-ux",
-      "title": "UI/UX Design",
-      "description": "Beautiful, intuitive interfaces that users love and that drive conversions.",
-      "icon": "palette",
+      "id": "data-eng",
+      "title": "Data Engineering",
+      "description": "Real-time streaming and analytics pipelines for big data applications.",
+      "icon": "database",
       "features": [
-        "User Research",
-        "Wireframing & Prototyping",
-        "Design Systems",
-        "Usability Testing"
+        "Apache Kafka & Flink",
+        "Elasticsearch",
+        "ETL Pipelines",
+        "Data Visualization"
+      ],
+      "image": {
+        "url": "/assets/images/services/web-dev.jpg",
+        "alt": "Data engineering illustration"
+      }
+    },
+    {
+      "id": "healthcare-fintech",
+      "title": "Healthcare & FinTech",
+      "description": "Specialized solutions for highly regulated industries.",
+      "icon": "shield",
+      "features": [
+        "HIPAA Compliance",
+        "Banking Systems",
+        "Telemedicine",
+        "Fraud Detection"
       ],
       "image": {
         "url": "/assets/images/services/ui-ux.jpg",
-        "alt": "UI/UX design illustration"
+        "alt": "Healthcare and FinTech illustration"
       }
     }
   ],
   "projects": [
     {
       "id": "proj-1",
-      "slug": "fintech-platform",
-      "title": "FinTech Trading Platform",
-      "client": "GlobalTrade Inc.",
-      "description": "Enterprise-grade trading platform processing $2B+ in daily transactions with real-time analytics.",
+      "slug": "almoosa-health",
+      "title": "Almoosa Health Group",
+      "client": "Almoosa Health",
+      "description": "Comprehensive healthcare platform with telemedicine and real-time consultations.",
       "thumbnail": {
-        "url": "/assets/images/projects/fintech-thumb.jpg",
-        "alt": "FinTech platform dashboard"
+        "url": "/assets/images/projects/almoosa-thumb.jpg",
+        "alt": "Almoosa Health App"
       },
-      "tags": ["React", "Node.js", "PostgreSQL", "WebSocket"],
-      "category": "Web Development"
+      "tags": [
+        "Vue.js",
+        "NestJS",
+        "Mobile App"
+      ],
+      "category": "Healthcare"
     },
     {
       "id": "proj-2",
-      "slug": "health-app",
-      "title": "AI-Powered Health App",
-      "client": "MediCare Solutions",
-      "description": "Revolutionary healthcare app connecting 500K+ patients with providers using AI diagnostics.",
+      "slug": "bright-media-lms",
+      "title": "Bright Media Lead Management",
+      "client": "Bright Media Inc.",
+      "description": "Comprehensive Lead Management System with role-based access, payments, and omni-channel messaging.",
       "thumbnail": {
-        "url": "/assets/images/projects/health-app-thumb.jpg",
-        "alt": "Health app interface"
+        "url": "/assets/images/projects/brightmedia-thumb.jpg",
+        "alt": "Lead Management System"
       },
-      "tags": ["React Native", "TensorFlow", "Firebase"],
-      "category": "Mobile Development"
+      "tags": [
+        "Next.js",
+        "Spring Boot",
+        "Stripe"
+      ],
+      "category": "Enterprise SaaS"
     },
     {
       "id": "proj-3",
-      "slug": "ecommerce-platform",
-      "title": "Luxury E-Commerce Platform",
-      "client": "Prestige Brands",
-      "description": "High-end e-commerce experience with 3D product visualization and AR try-on features.",
+      "slug": "solaramps-operations",
+      "title": "SolarAMPs Operations",
+      "client": "SolarAMPs",
+      "description": "All-in-one app for seamless project collaboration and productivity management.",
       "thumbnail": {
-        "url": "/assets/images/projects/ecommerce-thumb.jpg",
-        "alt": "E-commerce platform"
+        "url": "/assets/images/projects/solaramps-thumb.jpg",
+        "alt": "SolarAMPs App"
       },
-      "tags": ["Next.js", "Three.js", "Stripe", "Shopify"],
-      "category": "Web Development"
+      "tags": [
+        "Flutter",
+        "Firebase",
+        "Google Maps"
+      ],
+      "category": "Mobile Development"
     },
     {
       "id": "proj-4",
-      "slug": "saas-analytics",
-      "title": "SaaS Analytics Dashboard",
-      "client": "DataViz Pro",
-      "description": "Real-time analytics platform processing millions of data points with interactive visualizations.",
+      "slug": "book-better",
+      "title": "Book Better Marketplace",
+      "client": "Zapdas",
+      "description": "Modern salon marketplace connecting users with beauty professionals.",
       "thumbnail": {
-        "url": "/assets/images/projects/analytics-thumb.jpg",
-        "alt": "Analytics dashboard"
+        "url": "/assets/images/projects/bookbetter-thumb.jpg",
+        "alt": "Book Better App"
       },
-      "tags": ["React", "D3.js", "GraphQL", "MongoDB"],
-      "category": "Web Development"
-    }
-  ],
-  "stats": [
-    {
-      "label": "Projects Delivered",
-      "value": "250",
-      "suffix": "+",
-      "icon": "briefcase"
-    },
-    {
-      "label": "Happy Clients",
-      "value": "180",
-      "suffix": "+",
-      "icon": "smile"
-    },
-    {
-      "label": "Team Members",
-      "value": "45",
-      "suffix": "+",
-      "icon": "users"
-    },
-    {
-      "label": "Years of Excellence",
-      "value": "12",
-      "suffix": "+",
-      "icon": "award"
-    }
-  ],
-  "testimonials": [
-    {
-      "id": "test-1",
-      "text": "Mikasasoft transformed our outdated platform into a modern, scalable solution. Their expertise and dedication were instrumental in our 300% growth this year.",
-      "author": "Sarah Chen",
-      "role": "CTO",
-      "company": "TechVentures Inc.",
-      "avatar": {
-        "url": "/assets/images/testimonials/sarah-chen.jpg",
-        "alt": "Sarah Chen"
-      },
-      "rating": 5
-    },
-    {
-      "id": "test-2",
-      "text": "Working with Mikasasoft was a game-changer. They didn't just deliver code—they became true partners in our success. The results speak for themselves.",
-      "author": "Michael Rodriguez",
-      "role": "Founder & CEO",
-      "company": "InnovateLab",
-      "avatar": {
-        "url": "/assets/images/testimonials/michael-rodriguez.jpg",
-        "alt": "Michael Rodriguez"
-      },
-      "rating": 5
-    },
-    {
-      "id": "test-3",
-      "text": "The level of craftsmanship and attention to detail is unmatched. Mikasasoft built us a platform that our users absolutely love. Highly recommend!",
-      "author": "Emily Thompson",
-      "role": "Product Director",
-      "company": "DesignHub",
-      "avatar": {
-        "url": "/assets/images/testimonials/emily-thompson.jpg",
-        "alt": "Emily Thompson"
-      },
-      "rating": 5
-    },
-    {
-      "id": "test-4",
-      "text": "From concept to launch, the Mikasasoft team exceeded every expectation. Their technical expertise combined with business acumen is truly rare.",
-      "author": "David Park",
-      "role": "VP of Engineering",
-      "company": "CloudScale Systems",
-      "avatar": {
-        "url": "/assets/images/testimonials/david-park.jpg",
-        "alt": "David Park"
-      },
-      "rating": 5
+      "tags": [
+        "Flutter",
+        "Stripe",
+        "Marketplace"
+      ],
+      "category": "Mobile Development"
     }
   ],
   "cta": {

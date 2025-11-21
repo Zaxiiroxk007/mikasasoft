@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/common/Layout";
+import { Button } from "@/components/ui/button";
 import type { HeroSection } from "@/types";
 
 interface HomeHeroProps {
@@ -12,97 +11,67 @@ interface HomeHeroProps {
 }
 
 export function HomeHero({ data }: HomeHeroProps) {
-  const [isSafari, setIsSafari] = useState(false);
-
-  useEffect(() => {
-    const ua = navigator.userAgent;
-    setIsSafari(/^((?!chrome|android).)*safari/i.test(ua));
-  }, []);
-
-  // For Safari: Use plain div, no animations
-  // For others: Use Framer Motion
-  const Wrapper = isSafari ? 'div' : motion.div;
-  const animProps = isSafari ? {} : {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-zinc-950 pt-24 md:pt-0">
-      {/* Simple static background - no canvas, no particles */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black" />
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
-      </div>
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-zinc-950 pt-20">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
-      <Container size="xl" className="relative z-10 pt-24 pb-12 md:pt-28 md:pb-12">
-        <div className="text-center w-full">
+      <Container size="xl" className="relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <Wrapper {...animProps} className="mb-8">
-            <span className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-card border border-blue-500/30 text-blue-400 text-sm md:text-base font-semibold tracking-wide">
-              <span className="w-2 h-2 bg-blue-500 rounded-full" />
-              {data.subtitle}
-            </span>
-          </Wrapper>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 text-sm font-medium mb-8 animate-fade-in">
+            <span className="w-2 h-2 bg-blue-500 rounded-full" />
+            {data.subtitle}
+          </div>
 
           {/* Title */}
-          <Wrapper {...animProps} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-10">
-            <span className="text-white">Building Defenses</span>
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-8 animate-fade-in [animation-delay:200ms]">
+            Building Defenses <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
               Breaking Boundaries
             </span>
-          </Wrapper>
+          </h1>
 
           {/* Description */}
-          <Wrapper {...animProps} className="text-lg md:text-xl text-zinc-200 mb-10 max-w-3xl mx-auto px-4">
+          <p className="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in [animation-delay:400ms]">
             {data.description}
-          </Wrapper>
+          </p>
 
           {/* CTA Buttons */}
-          <Wrapper {...animProps} className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in [animation-delay:600ms]">
             {data.cta.map((button, index) => (
-              <Link
+              <Button
                 key={index}
-                href={button.href || "#"}
-                className={`
-                  inline-flex items-center justify-center gap-3 rounded-xl font-bold transition-all duration-200 
-                  min-w-[280px] px-10 py-5 text-base
-                  ${button.variant === 'primary' 
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:opacity-90' 
-                    : 'border-2 border-blue-500/40 bg-blue-500/10 text-zinc-300 hover:bg-blue-500/20'
-                  }
-                `}
+                asChild
+                size="lg"
+                variant={button.variant as "primary" | "secondary" | "ghost" | "outline" | "danger"}
+                className="min-w-[200px] h-14 text-base"
               >
-                {button.text}
-                <ArrowRight size={18} />
-              </Link>
+                <Link href={button.href || "#"}>
+                  {button.text}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
             ))}
-          </Wrapper>
+          </div>
 
-          {/* Stats - Simple, no animations */}
-          <Wrapper {...animProps} className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full pt-12 border-t border-zinc-800/50">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">250+</div>
-              <div className="text-sm text-zinc-300 uppercase tracking-wider">Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">180+</div>
-              <div className="text-sm text-zinc-300 uppercase tracking-wider">Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">45+</div>
-              <div className="text-sm text-zinc-300 uppercase tracking-wider">Team</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">12+</div>
-              <div className="text-sm text-zinc-300 uppercase tracking-wider">Years</div>
-            </div>
-          </Wrapper>
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-zinc-800 pt-12 animate-fade-in [animation-delay:800ms]">
+            {[
+              { label: "Projects", value: "250+" },
+              { label: "Clients", value: "180+" },
+              { label: "Team", value: "45+" },
+              { label: "Years", value: "12+" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-sm text-zinc-500 uppercase tracking-wider font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </section>
   );
 }
+

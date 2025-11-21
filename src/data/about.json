@@ -2,202 +2,100 @@
   "hero": {
     "title": "We Build the Future",
     "subtitle": "Driven by Innovation, Defined by Excellence",
-    "description": "Since 2012, Mikasasoft has been transforming ambitious ideas into powerful digital realities. We're not just developers—we're strategic partners committed to your success."
+    "description": "Mikasasoft is a collective of Principal Engineers and Tech Leads delivering enterprise-grade solutions. We transform ambitious ideas into powerful digital realities."
   },
-  "story": "Founded in the heart of Silicon Valley, Mikasasoft emerged from a simple vision: to create software that doesn't just work, but inspires. Our founders, veterans of the tech industry, saw a gap between what businesses needed and what traditional development agencies delivered. We built Mikasasoft to bridge that gap—combining deep technical expertise with genuine business partnership. Today, we're proud to have helped over 180 companies achieve their digital ambitions, from scrappy startups to Fortune 500 enterprises.",
-  "timeline": [
-    {
-      "id": "1",
-      "year": "2012",
-      "title": "Foundation",
-      "description": "Mikasasoft was founded with a mission to redefine software development excellence.",
-      "icon": "flag"
-    },
-    {
-      "id": "2",
-      "year": "2014",
-      "title": "First Major Client",
-      "description": "Secured our first enterprise client, delivering a platform that scaled to 1M+ users.",
-      "icon": "trending-up"
-    },
-    {
-      "id": "3",
-      "year": "2016",
-      "title": "Team Expansion",
-      "description": "Grew to 20+ team members, expanding our capabilities in mobile and cloud.",
-      "icon": "users"
-    },
-    {
-      "id": "4",
-      "year": "2018",
-      "title": "Industry Recognition",
-      "description": "Won 'Best Software Development Agency' award from TechCrunch.",
-      "icon": "award"
-    },
-    {
-      "id": "5",
-      "year": "2020",
-      "title": "Global Reach",
-      "description": "Expanded operations internationally, serving clients across 15 countries.",
-      "icon": "globe"
-    },
-    {
-      "id": "6",
-      "year": "2023",
-      "title": "Innovation Hub",
-      "description": "Launched our AI & Machine Learning practice, staying ahead of the curve.",
-      "icon": "cpu"
-    },
-    {
-      "id": "7",
-      "year": "2025",
-      "title": "Present Day",
-      "description": "45+ team members strong, delivering cutting-edge solutions worldwide.",
-      "icon": "zap"
-    }
-  ],
+  "story": "Mikasasoft was born from a shared vision among a group of elite software engineers. After years of leading projects for major enterprises and innovative startups, we saw a need for a development partner that could truly match the technical rigor of top-tier internal teams. We aren't just an agency; we are your technical co-founders, your architects, and your problem solvers. With expertise spanning from high-frequency trading systems to HIPAA-compliant healthcare platforms, we bring a level of engineering maturity that ensures your product scales from day one.",
   "missionVisionValues": [
     {
       "id": "1",
       "type": "mission",
       "title": "Our Mission",
-      "description": "To empower businesses with transformative technology solutions that drive real results. We exist to turn ambitious visions into digital reality.",
+      "description": "To provide elite engineering talent that empowers businesses to build secure, scalable, and high-performance software.",
       "icon": "target"
     },
     {
       "id": "2",
       "type": "vision",
       "title": "Our Vision",
-      "description": "To be the most trusted technology partner for visionary companies worldwide. We envision a future where great software is accessible to every ambitious business.",
+      "description": "To be the standard of engineering excellence for critical digital infrastructure.",
       "icon": "eye"
     },
     {
       "id": "3",
       "type": "value",
-      "title": "Excellence",
-      "description": "We obsess over quality in everything we build. From code architecture to user experience, excellence is our standard.",
-      "icon": "star"
+      "title": "Engineering First",
+      "description": "We prioritize robust architecture, clean code, and scalability above all else.",
+      "icon": "code"
     },
     {
       "id": "4",
       "type": "value",
-      "title": "Innovation",
-      "description": "We stay ahead of the curve, continuously learning and adopting cutting-edge technologies to give our clients a competitive edge.",
-      "icon": "lightbulb"
+      "title": "Security",
+      "description": "We build with a security-first mindset, ensuring compliance and data protection.",
+      "icon": "shield"
     },
     {
       "id": "5",
       "type": "value",
-      "title": "Partnership",
-      "description": "Your success is our success. We don't just deliver projects—we build long-term relationships based on trust and mutual growth.",
-      "icon": "handshake"
+      "title": "Transparency",
+      "description": "Clear communication and honest technical assessments.",
+      "icon": "message-square"
     },
     {
       "id": "6",
       "type": "value",
-      "title": "Transparency",
-      "description": "Open communication, honest timelines, and clear pricing. We believe great partnerships are built on trust.",
-      "icon": "message-square"
+      "title": "Innovation",
+      "description": "Leveraging the latest stable technologies to give you a competitive edge.",
+      "icon": "zap"
     }
   ],
   "culture": {
-    "title": "A Culture of Innovation",
-    "description": "At Mikasasoft, we've built more than a company—we've cultivated a community of passionate technologists who love what they do. Our culture is rooted in continuous learning, creative problem-solving, and work-life harmony.",
+    "title": "Engineered for Success",
+    "description": "Our culture is built on technical mastery and continuous improvement. We are a team of problem solvers who thrive on complex challenges.",
     "images": [
       {
         "url": "/assets/images/culture/office-1.jpg",
-        "alt": "Team collaboration"
+        "alt": "Code review session"
       },
       {
         "url": "/assets/images/culture/office-2.jpg",
-        "alt": "Modern workspace"
+        "alt": "Architecture planning"
       },
       {
         "url": "/assets/images/culture/office-3.jpg",
-        "alt": "Team event"
+        "alt": "Team collaboration"
       }
     ],
     "highlights": [
-      "Flexible remote & hybrid work",
-      "Continuous learning budget",
-      "Team retreats & events",
-      "Health & wellness programs",
-      "Open office environment",
-      "Innovation Fridays"
+      "Senior-level talent only",
+      "Focus on complex problems",
+      "Remote-first culture",
+      "Continuous learning",
+      "Open source contributions",
+      "Agile methodologies"
     ]
   },
   "certifications": [
     {
       "id": "1",
-      "name": "AWS Advanced Consulting Partner",
+      "name": "AWS Certified Solutions Architect",
       "issuer": "Amazon Web Services",
       "year": "2023",
       "logo": {
         "url": "/assets/images/certs/aws.svg",
-        "alt": "AWS Partner"
+        "alt": "AWS Certified"
       }
     },
     {
       "id": "2",
-      "name": "Microsoft Gold Partner",
-      "issuer": "Microsoft",
-      "year": "2022",
-      "logo": {
-        "url": "/assets/images/certs/microsoft.svg",
-        "alt": "Microsoft Partner"
-      }
-    },
-    {
-      "id": "3",
-      "name": "ISO 27001 Certified",
-      "issuer": "ISO",
-      "year": "2021",
-      "logo": {
-        "url": "/assets/images/certs/iso.svg",
-        "alt": "ISO 27001"
-      }
-    },
-    {
-      "id": "4",
-      "name": "Google Cloud Partner",
+      "name": "Google Cloud Professional",
       "issuer": "Google Cloud",
       "year": "2023",
       "logo": {
         "url": "/assets/images/certs/google-cloud.svg",
-        "alt": "Google Cloud Partner"
+        "alt": "Google Cloud Certified"
       }
     }
   ],
-  "awards": [
-    {
-      "id": "1",
-      "name": "Best Software Development Agency",
-      "description": "Recognized for excellence in custom software development",
-      "year": "2023",
-      "image": {
-        "url": "/assets/images/awards/techcrunch.jpg",
-        "alt": "TechCrunch Award"
-      }
-    },
-    {
-      "id": "2",
-      "name": "Top 10 Web Development Companies",
-      "description": "Listed among the top web development firms in North America",
-      "year": "2022",
-      "image": {
-        "url": "/assets/images/awards/clutch.jpg",
-        "alt": "Clutch Award"
-      }
-    },
-    {
-      "id": "3",
-      "name": "Innovation Excellence Award",
-      "description": "For pioneering work in AI-driven applications",
-      "year": "2024",
-      "image": {
-        "url": "/assets/images/awards/innovation.jpg",
-        "alt": "Innovation Award"
-      }
-    }
-  ]
+  "awards": []
 }
